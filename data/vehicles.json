@@ -1,0 +1,252 @@
+[
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH009",
+    "homeWarehouseId": "WH002",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH002",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "MH-02-PT-1004"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH018",
+    "homeWarehouseId": "WH004",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH004",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "TN-04-PT-1003"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH019",
+    "homeWarehouseId": "WH004",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH004",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "TN-04-PT-1004"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH016",
+    "homeWarehouseId": "WH004",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH004",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "TN-04-PT-1001"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH017",
+    "homeWarehouseId": "WH004",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH004",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "TN-04-PT-1002"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH014",
+    "homeWarehouseId": "WH003",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH003",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "WB-03-PT-1004"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH015",
+    "homeWarehouseId": "WH003",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH003",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "WB-03-PT-1005"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH012",
+    "homeWarehouseId": "WH003",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH003",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "WB-03-PT-1002"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH013",
+    "homeWarehouseId": "WH003",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH003",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "WB-03-PT-1003"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH010",
+    "homeWarehouseId": "WH002",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH002",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "MH-02-PT-1005"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH011",
+    "homeWarehouseId": "WH003",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH003",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "WB-03-PT-1001"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH007",
+    "homeWarehouseId": "WH002",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH002",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "MH-02-PT-1002"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH008",
+    "homeWarehouseId": "WH002",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH002",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "MH-02-PT-1003"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH005",
+    "homeWarehouseId": "WH001",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH001",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "DL-01-PT-1005"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH006",
+    "homeWarehouseId": "WH002",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH002",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "MH-02-PT-1001"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH003",
+    "homeWarehouseId": "WH001",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH001",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "DL-01-PT-1003"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH025",
+    "homeWarehouseId": "WH005",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH005",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "KA-05-PT-1005"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH004",
+    "homeWarehouseId": "WH001",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH001",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "DL-01-PT-1004"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH001",
+    "homeWarehouseId": "WH001",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH001",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "DL-01-PT-1001"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH023",
+    "homeWarehouseId": "WH005",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH005",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "KA-05-PT-1003"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH002",
+    "homeWarehouseId": "WH001",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH001",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "DL-01-PT-1002"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH024",
+    "homeWarehouseId": "WH005",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH005",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "KA-05-PT-1004"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH021",
+    "homeWarehouseId": "WH005",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH005",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "KA-05-PT-1001"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH022",
+    "homeWarehouseId": "WH005",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH005",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "KA-05-PT-1002"
+  },
+  {
+    "supportedCapabilities": {},
+    "vehicleId": "VEH020",
+    "homeWarehouseId": "WH004",
+    "status": "AVAILABLE",
+    "currentTripId": null,
+    "lastKnownLocation": "WH004",
+    "maxCrateCapacity": 5,
+    "registrationNumber": "TN-04-PT-1005"
+  }
+]

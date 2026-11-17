@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Chennai Southern Gateway Hub",
+    "warehouseId": "WH004",
+    "longitude": 80.2707,
+    "latitude": 13.0827,
+    "city": "Chennai"
+  },
+  {
+    "name": "Kolkata Eastern Distribution Hub",
+    "warehouseId": "WH003",
+    "longitude": 88.3639,
+    "latitude": 22.5726,
+    "city": "Kolkata"
+  },
+  {
+    "name": "Mumbai Western Distribution Hub",
+    "warehouseId": "WH002",
+    "longitude": 72.8777,
+    "latitude": 19.076,
+    "city": "Mumbai"
+  },
+  {
+    "name": "Delhi Central Distribution Hub",
+    "warehouseId": "WH001",
+    "longitude": 77.209,
+    "latitude": 28.6139,
+    "city": "Delhi"
+  },
+  {
+    "name": "Bengaluru Tech & Pharma Hub",
+    "warehouseId": "WH005",
+    "longitude": 77.5946,
+    "latitude": 12.9716,
+    "city": "Bengaluru"
+  }
+]

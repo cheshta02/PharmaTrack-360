@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Monoclonal Antibodies mAb-21",
+    "active": true,
+    "policyId": "POL002",
+    "productId": "PRD004",
+    "category": "Biologics",
+    "description": "Therapeutic monoclonal antibody vials"
+  },
+  {
+    "name": "Amoxicillin Oral Suspension",
+    "active": true,
+    "policyId": "POL004",
+    "productId": "PRD005",
+    "category": "Pharmaceutical",
+    "description": "Liquid antibiotic formulation"
+  },
+  {
+    "name": "Insulin Glargine Solostar",
+    "active": true,
+    "policyId": "POL002",
+    "productId": "PRD002",
+    "category": "Biologics",
+    "description": "Long-acting human insulin analog"
+  },
+  {
+    "name": "Varicella Zoster Vaccine",
+    "active": true,
+    "policyId": "POL003",
+    "productId": "PRD003",
+    "category": "Vaccine",
+    "description": "Live attenuated frozen virus vaccine"
+  },
+  {
+    "name": "mRNA COVID-19 Vaccine",
+    "active": true,
+    "policyId": "POL001",
+    "productId": "PRD001",
+    "category": "Vaccine",
+    "description": "Ultra-low temperature mRNA formulation"
+  }
+]
