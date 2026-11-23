@@ -16,14 +16,7 @@ public class DataBootstrapper {
     private final CrateService crateService;
     private final SensorService sensorService;
 
-    public DataBootstrapper(InMemoryDataStore dataStore,
-                            WarehouseService warehouseService,
-                            VehicleService vehicleService,
-                            TemperaturePolicyService policyService,
-                            ProductService productService,
-                            ProductBatchService batchService,
-                            CrateService crateService,
-                            SensorService sensorService) {
+    public DataBootstrapper(InMemoryDataStore dataStore, WarehouseService warehouseService, VehicleService vehicleService, TemperaturePolicyService policyService, ProductService productService, ProductBatchService batchService, CrateService crateService, SensorService sensorService) {
         this.dataStore = dataStore;
         this.warehouseService = warehouseService;
         this.vehicleService = vehicleService;

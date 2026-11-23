@@ -7,13 +7,8 @@ import pharmatrack.logistics.model.Vehicle;
 import pharmatrack.logistics.model.VehicleStatus;
 import pharmatrack.storage.InMemoryDataStore;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing the fleet of pharmaceutical transport vehicles across warehouses.
- */
 public class VehicleService {
     private final InMemoryDataStore dataStore;
 
@@ -51,15 +46,12 @@ public class VehicleService {
     }
 
     public List<Vehicle> getVehiclesByWarehouse(String warehouseId) {
-        return dataStore.getVehicles().values().stream()
-                .filter(v -> v.getHomeWarehouseId().equals(warehouseId))
-                .toList();
+        return dataStore.getVehicles().values().stream().filter(v -> v.getHomeWarehouseId().equals(warehouseId)).toList();
     }
 
     public List<Vehicle> getAvailableVehiclesByWarehouse(String warehouseId) {
-        return dataStore.getVehicles().values().stream()
-                .filter(v -> v.getHomeWarehouseId().equals(warehouseId) && v.getStatus() == VehicleStatus.AVAILABLE)
-                .toList();
+        return dataStore.getVehicles().values().stream().filter(v -> v.getHomeWarehouseId().equals(warehouseId) && 
+        v.getStatus() == VehicleStatus.AVAILABLE).toList();
     }
 
     public void updateVehicleStatus(String vehicleId, VehicleStatus status) {
@@ -68,9 +60,6 @@ public class VehicleService {
         vehicle.transitionStatus(status);
     }
 
-    /**
-     * Seeds the initial fleet: Exactly 5 vehicles per warehouse across the 5 demonstration warehouses (25 total).
-     */
     public void seedDefaultFleet() {
         if (dataStore.getVehicles().isEmpty()) {
             String[] whIds = {"WH001", "WH002", "WH003", "WH004", "WH005"};

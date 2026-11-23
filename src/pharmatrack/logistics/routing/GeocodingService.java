@@ -15,15 +15,11 @@ import java.time.Duration;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Converts city and location names into geographic coordinates with caching and robust offline fallback.
- */
 public class GeocodingService {
     private final InMemoryDataStore dataStore;
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
 
-    // Built-in high-accuracy coordinates for common Indian logistics locations
     private static final Map<String, double[]> KNOWN_LOCATIONS = new ConcurrentHashMap<>();
 
     static {
@@ -53,7 +49,6 @@ public class GeocodingService {
                     .connectTimeout(Duration.ofSeconds(4))
                     .build();
         } catch (Throwable ignored) {
-            // Socket / loopback restriction in sandboxed environments
         }
         this.httpClient = client;
         this.objectMapper = new ObjectMapper();
@@ -65,19 +60,16 @@ public class GeocodingService {
         }
         String cleanName = locationName.trim().toLowerCase();
 
-        // 1. Check in-memory datastore cache
         if (dataStore.getGeocodingCache().containsKey(cleanName)) {
             return dataStore.getGeocodingCache().get(cleanName);
         }
 
-        // 2. Check built-in known locations
         if (KNOWN_LOCATIONS.containsKey(cleanName)) {
             double[] coords = KNOWN_LOCATIONS.get(cleanName);
             dataStore.getGeocodingCache().put(cleanName, coords);
             return coords;
         }
 
-        // 3. Try online Nominatim geocoding if network available
         if (httpClient != null) {
             try {
                 String url = "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
@@ -107,7 +99,6 @@ public class GeocodingService {
             }
         }
 
-        // 4. Fallback search
         for (Map.Entry<String, double[]> entry : KNOWN_LOCATIONS.entrySet()) {
             if (cleanName.contains(entry.getKey()) || entry.getKey().contains(cleanName)) {
                 dataStore.getGeocodingCache().put(cleanName, entry.getValue());

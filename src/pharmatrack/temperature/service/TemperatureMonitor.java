@@ -5,15 +5,10 @@ import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.model.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.function.Consumer;
 
-/**
- * Evaluates individual temperature readings for crates and emits alerts if an excursion occurs.
- */
 public class TemperatureMonitor {
     private final InMemoryDataStore dataStore;
     private final CrateService crateService;
@@ -23,18 +18,11 @@ public class TemperatureMonitor {
     private final TemperaturePolicyService policyService;
     private final ExcursionDetector excursionDetector;
 
-    // Track current temperature status per crate: crateId -> TemperatureStatus
     private final ConcurrentHashMap<String, TemperatureStatus> currentCrateStatus = new ConcurrentHashMap<>();
-    // Listeners for temperature excursions (e.g. bridge to logistics module)
     private final List<Consumer<TemperatureExcursion>> excursionListeners = new CopyOnWriteArrayList<>();
 
-    public TemperatureMonitor(InMemoryDataStore dataStore,
-                              CrateService crateService,
-                              SensorService sensorService,
-                              ProductBatchService batchService,
-                              ProductService productService,
-                              TemperaturePolicyService policyService,
-                              ExcursionDetector excursionDetector) {
+    public TemperatureMonitor(InMemoryDataStore dataStore, CrateService crateService, SensorService sensorService, ProductBatchService batchService, ProductService productService, TemperaturePolicyService policyService,
+     ExcursionDetector excursionDetector) {
         this.dataStore = dataStore;
         this.crateService = crateService;
         this.sensorService = sensorService;
@@ -55,28 +43,23 @@ public class TemperatureMonitor {
             timestamp = LocalDateTime.now();
         }
 
-        // 1. Identify sensor and record reading activity
         Sensor sensor = sensorService.findSensorById(sensorId).orElse(null);
         if (sensor != null) {
             sensor.recordReading(timestamp);
         }
 
-        // 2. Identify crate
         Crate crate = crateService.findCrateById(crateId).orElse(null);
         if (crate == null) {
-            TemperatureReading invalidReading = new TemperatureReading(
-                    IdGenerator.nextId("RDG"), sensorId, crateId, timestamp, temperature, TemperatureStatus.INVALID_READING);
+            TemperatureReading invalidReading = new TemperatureReading(IdGenerator.nextId("RDG"), sensorId, crateId, timestamp, temperature, TemperatureStatus.INVALID_READING);
             dataStore.getReadings().add(invalidReading);
             return invalidReading;
         }
 
-        // 3. Find associated batch and policy
         String batchId = null;
         String shipmentId = crate.getCurrentShipmentId();
         String tripId = crate.getCurrentTripId();
         TemperaturePolicy policy = null;
 
-        // If crate is assigned to a shipment, look up product from shipment
         if (shipmentId != null && dataStore.getShipments().containsKey(shipmentId)) {
             var shipment = dataStore.getShipments().get(shipmentId);
             batchId = shipment.getBatchId();
@@ -88,21 +71,17 @@ public class TemperatureMonitor {
             }
         }
 
-        // Fallback: if no shipment attached, use default capability range as baseline policy
         if (policy == null) {
             policy = new TemperaturePolicy("DEFAULT-" + crate.getCrateId(), "Crate Native Range",
                     crate.getMinTempCapability(), crate.getMaxTempCapability(), "Operating capability");
         }
 
-        // 4. Compare reading with policy limits
         TemperatureStatus tempStatus = excursionDetector.evaluateReading(temperature, policy);
         currentCrateStatus.put(crateId, tempStatus);
 
-        TemperatureReading reading = new TemperatureReading(
-                IdGenerator.nextId("RDG"), sensorId, crateId, timestamp, temperature, tempStatus);
+        TemperatureReading reading = new TemperatureReading(IdGenerator.nextId("RDG"), sensorId, crateId, timestamp, temperature, tempStatus);
         dataStore.getReadings().add(reading);
 
-        // 5. Excursion detection and notification
         Optional<TemperatureExcursion> excursionOpt = excursionDetector.checkAndRecordExcursion(
                 crateId, sensorId, batchId, shipmentId, tripId, temperature, policy, timestamp);
 

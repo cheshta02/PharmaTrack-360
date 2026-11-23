@@ -8,9 +8,6 @@ import pharmatrack.storage.InMemoryDataStore;
 
 import java.util.List;
 
-/**
- * Provides tracking status summaries for active trips and shipments.
- */
 public class ShipmentTracker {
     private final InMemoryDataStore dataStore;
 

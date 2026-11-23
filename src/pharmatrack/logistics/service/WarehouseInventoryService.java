@@ -7,12 +7,8 @@ import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.model.CrateStatus;
 import pharmatrack.temperature.model.ProductBatch;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing warehouse-specific stocks, fleet availability, and crate inventory.
- */
 public class WarehouseInventoryService {
     private final InMemoryDataStore dataStore;
 
@@ -29,37 +25,26 @@ public class WarehouseInventoryService {
 
     public List<ProductBatch> getAvailableBatches(String warehouseId, String productId, int requiredQty) {
         WarehouseInventory inv = getInventory(warehouseId);
-        return inv.getBatchIds().stream()
-                .map(id -> dataStore.getBatches().get(id))
-                .filter(b -> b != null &&
-                             b.getProductId().equals(productId) &&
-                             b.isEligibleForAllocation(requiredQty))
-                .toList();
+        return inv.getBatchIds().stream().map(id -> dataStore.getBatches().get(id)).filter(b -> b != null &&
+            b.getProductId().equals(productId) &&
+            b.isEligibleForAllocation(requiredQty)).toList();
     }
 
     public int getTotalAvailableQuantity(String warehouseId, String productId) {
         WarehouseInventory inv = getInventory(warehouseId);
-        return inv.getBatchIds().stream()
-                .map(id -> dataStore.getBatches().get(id))
-                .filter(b -> b != null && b.getProductId().equals(productId) && !b.isBlocked() && !b.isExpired())
-                .mapToInt(ProductBatch::getAvailableQuantity)
-                .sum();
+        return inv.getBatchIds().stream().map(id -> dataStore.getBatches().get(id)).filter(b -> b != null && b.getProductId().equals(productId) && !b.isBlocked() && !b.isExpired()).mapToInt(ProductBatch::getAvailableQuantity).sum();
     }
 
     public int getAvailableCrateCount(String warehouseId) {
         WarehouseInventory inv = getInventory(warehouseId);
-        return (int) inv.getCrateIds().stream()
-                .map(id -> dataStore.getCrates().get(id))
-                .filter(c -> c != null && c.getStatus() == CrateStatus.AVAILABLE)
-                .count();
+        return (int) inv.getCrateIds().stream().map(id -> dataStore.getCrates().get(id)).filter(c -> c != null && 
+            c.getStatus() == CrateStatus.AVAILABLE).count();
     }
 
     public int getAvailableVehicleCount(String warehouseId) {
         WarehouseInventory inv = getInventory(warehouseId);
-        return (int) inv.getVehicleIds().stream()
-                .map(id -> dataStore.getVehicles().get(id))
-                .filter(v -> v != null && v.getStatus() == VehicleStatus.AVAILABLE)
-                .count();
+        return (int) inv.getVehicleIds().stream().map(id -> dataStore.getVehicles().get(id)).filter(v -> v != null && 
+            v.getStatus() == VehicleStatus.AVAILABLE).count();
     }
 
     public String generateInventoryReport(String warehouseId) {

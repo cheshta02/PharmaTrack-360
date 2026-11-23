@@ -7,9 +7,6 @@ import pharmatrack.logistics.model.RouteCheckpoint;
 import java.time.LocalDateTime;
 import java.util.*;
 
-/**
- * Automatically generates route checkpoints at configurable intervals (~30 km) and embeds actual delivery stops.
- */
 public class CheckpointGenerator {
     private final double intervalKm;
     private final double averageSpeedKmh;
@@ -49,7 +46,6 @@ public class CheckpointGenerator {
 
         List<RouteCheckpoint> checkpoints = new ArrayList<>();
 
-        // Checkpoint 0: Source Warehouse Departure
         RouteCheckpoint start = new RouteCheckpoint(
                 IdGenerator.nextId("CHK"),
                 sourceName + " (Departure Hub)",
@@ -58,7 +54,6 @@ public class CheckpointGenerator {
         checkpoints.add(start);
 
         if (geometryCoordinates == null || geometryCoordinates.size() < 2) {
-            // If no dense geometry provided, interpolate directly to delivery stops
             double cumDist = 0.0;
             double prevLat = sourceLat;
             double prevLon = sourceLon;
@@ -82,7 +77,6 @@ public class CheckpointGenerator {
             return checkpoints;
         }
 
-        // Dense geometry processing: compute cumulative distances along the polyline
         double totalAccumulated = 0.0;
         double nextIntervalThreshold = intervalKm;
         Set<String> placedDestinations = new HashSet<>();
@@ -93,7 +87,6 @@ public class CheckpointGenerator {
             double seg = haversineDistanceKm(prev[0], prev[1], curr[0], curr[1]);
             totalAccumulated += seg;
 
-            // Check if any delivery destination is near this point (< 15 km) and not yet placed
             for (DeliveryDestination dest : deliveryDestinations) {
                 if (!placedDestinations.contains(dest.shipmentId)) {
                     double distToDest = haversineDistanceKm(curr[0], curr[1], dest.latitude, dest.longitude);
@@ -114,7 +107,6 @@ public class CheckpointGenerator {
                 }
             }
 
-            // Create virtual checkpoint at interval threshold
             if (totalAccumulated >= nextIntervalThreshold && i < geometryCoordinates.size() - 1) {
                 long travelMinutes = (long) ((totalAccumulated / averageSpeedKmh) * 60);
                 LocalDateTime expectedTime = dispatchTime.plusMinutes(travelMinutes);
@@ -131,7 +123,6 @@ public class CheckpointGenerator {
             }
         }
 
-        // Ensure all delivery stops are placed
         for (DeliveryDestination dest : deliveryDestinations) {
             if (!placedDestinations.contains(dest.shipmentId)) {
                 double segDist = haversineDistanceKm(

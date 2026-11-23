@@ -7,13 +7,8 @@ import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.model.TemperaturePolicy;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing pharmaceutical temperature policies.
- */
 public class TemperaturePolicyService {
     private final InMemoryDataStore dataStore;
 
@@ -21,8 +16,7 @@ public class TemperaturePolicyService {
         this.dataStore = dataStore;
     }
 
-    public TemperaturePolicy registerPolicy(String policyId, String name, double minTemp, double maxTemp,
-                                            String unit, String version, String description) {
+    public TemperaturePolicy registerPolicy(String policyId, String name, double minTemp, double maxTemp, String unit, String version, String description) {
         if (policyId == null || policyId.trim().isEmpty()) {
             policyId = IdGenerator.nextId("POL");
         }
@@ -52,7 +46,6 @@ public class TemperaturePolicyService {
         policy.setName(name);
         policy.updateTemperatureLimits(minTemp, maxTemp);
         policy.setDescription(description);
-        // Increment version to maintain audit trail
         try {
             double currentVer = Double.parseDouble(policy.getVersion());
             policy.setVersion(String.format("%.1f", currentVer + 0.1));

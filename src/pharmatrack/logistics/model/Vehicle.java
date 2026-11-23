@@ -5,15 +5,8 @@ import pharmatrack.json.JsonProperty;
 import pharmatrack.common.exception.InvalidStateTransitionException;
 import pharmatrack.common.util.InputValidator;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
-/**
- * Cold-chain transport vehicle with independent power ports and multi-compartment support.
- * Maximum capacity: 5 crates.
- */
 public class Vehicle {
     public static final int MAX_CRATE_CAPACITY = 5;
 

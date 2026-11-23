@@ -10,13 +10,8 @@ import pharmatrack.temperature.service.ProductBatchService;
 import pharmatrack.temperature.service.ProductService;
 import pharmatrack.temperature.service.TemperaturePolicyService;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-/**
- * Handles expedited emergency dispatch allocations, ensuring emergency shipments receive top resource priority
- * without violating physical safety constraints or pre-empting in-transit vehicles.
- */
 public class EmergencyDispatchService {
     private final InMemoryDataStore dataStore;
     private final WarehouseSelectionService warehouseSelectionService;
@@ -26,13 +21,7 @@ public class EmergencyDispatchService {
     private final CrateAllocationService crateAllocationService;
     private final VehicleAllocationService vehicleAllocationService;
 
-    public EmergencyDispatchService(InMemoryDataStore dataStore,
-                                    WarehouseSelectionService warehouseSelectionService,
-                                    ProductService productService,
-                                    TemperaturePolicyService policyService,
-                                    ProductBatchService batchService,
-                                    CrateAllocationService crateAllocationService,
-                                    VehicleAllocationService vehicleAllocationService) {
+    public EmergencyDispatchService(InMemoryDataStore dataStore, WarehouseSelectionService warehouseSelectionService, ProductService productService, TemperaturePolicyService policyService, ProductBatchService batchService,  CrateAllocationService crateAllocationService, VehicleAllocationService vehicleAllocationService) {
         this.dataStore = dataStore;
         this.warehouseSelectionService = warehouseSelectionService;
         this.productService = productService;
@@ -51,8 +40,7 @@ public class EmergencyDispatchService {
         public final Vehicle vehicle;
         public final String message;
 
-        public EmergencyDispatchResult(boolean success, Shipment shipment, Warehouse sourceWarehouse,
-                                       ProductBatch batch, List<Crate> crates, Vehicle vehicle, String message) {
+        public EmergencyDispatchResult(boolean success, Shipment shipment, Warehouse sourceWarehouse, ProductBatch batch, List<Crate> crates, Vehicle vehicle, String message) {
             this.success = success;
             this.shipment = shipment;
             this.sourceWarehouse = sourceWarehouse;
@@ -71,15 +59,13 @@ public class EmergencyDispatchService {
             return new EmergencyDispatchResult(false, shipment, null, null, null, null, "Shipment is not marked EMERGENCY priority.");
         }
 
-        // 1. Evaluate warehouse feasibility
         WarehouseSelectionService.WarehouseFeasibilityResult eval = warehouseSelectionService.selectFeasibleWarehouse(
                 shipment.getDestinationCity(), shipment.getProductId(), shipment.getRequiredQuantity(),
                 shipment.getRequiredCrates(), shipment.getExpectedDeliveryDeadline());
 
         if (!eval.isFeasible()) {
-            // Retain shipment in pending queue with shortage alert
             String alert = "[EMERGENCY ALERT] Resource shortage for Emergency Shipment " + shipment.getShipmentId() +
-                           ": " + eval.getExplanation();
+                ": " + eval.getExplanation();
             return new EmergencyDispatchResult(false, shipment, null, null, null, null, alert);
         }
 
@@ -88,17 +74,14 @@ public class EmergencyDispatchService {
         shipment.setSourceWarehouseId(sourceWh.getWarehouseId());
         shipment.setBatchId(batch.getBatchId());
 
-        // 2. Reserve stock
         try {
             batchService.reserveBatchStock(batch.getBatchId(), shipment.getRequiredQuantity());
         } catch (Exception ex) {
             return new EmergencyDispatchResult(false, shipment, sourceWh, batch, null, null,
-                    "[EMERGENCY ALERT] Failed to reserve batch stock: " + ex.getMessage());
+                "[EMERGENCY ALERT] Failed to reserve batch stock: " + ex.getMessage());
         }
 
-        // 3. Allocate crates
-        TemperaturePolicy policy = policyService.findPolicyById(
-                productService.findProductById(shipment.getProductId()).get().getPolicyId()).get();
+        TemperaturePolicy policy = policyService.findPolicyById( productService.findProductById(shipment.getProductId()).get().getPolicyId()).get();
 
         List<Crate> allocatedCrates;
         try {
@@ -106,10 +89,9 @@ public class EmergencyDispatchService {
         } catch (Exception ex) {
             batchService.releaseBatchStock(batch.getBatchId(), shipment.getRequiredQuantity());
             return new EmergencyDispatchResult(false, shipment, sourceWh, batch, null, null,
-                    "[EMERGENCY ALERT] Failed to allocate compatible crates: " + ex.getMessage());
+                "[EMERGENCY ALERT] Failed to allocate compatible crates: " + ex.getMessage());
         }
 
-        // 4. Allocate vehicle
         Vehicle vehicle;
         try {
             vehicle = vehicleAllocationService.allocateVehicleForTrip(sourceWh.getWarehouseId(), allocatedCrates);
@@ -117,12 +99,11 @@ public class EmergencyDispatchService {
             crateAllocationService.releaseAllocatedCrates(shipment);
             batchService.releaseBatchStock(batch.getBatchId(), shipment.getRequiredQuantity());
             return new EmergencyDispatchResult(false, shipment, sourceWh, batch, allocatedCrates, null,
-                    "[EMERGENCY ALERT] No available vehicle at " + sourceWh.getWarehouseId() + ": " + ex.getMessage());
+                "[EMERGENCY ALERT] No available vehicle at " + sourceWh.getWarehouseId() + ": " + ex.getMessage());
         }
 
         shipment.transitionStatus(ShipmentStatus.ALLOCATED);
-        String successMsg = String.format("Emergency shipment %s successfully allocated resources at %s with Vehicle %s and %d crates.",
-                shipment.getShipmentId(), sourceWh.getCity(), vehicle.getVehicleId(), allocatedCrates.size());
+        String successMsg = String.format("Emergency shipment %s successfully allocated resources at %s with Vehicle %s and %d crates.", shipment.getShipmentId(), sourceWh.getCity(), vehicle.getVehicleId(), allocatedCrates.size());
 
         return new EmergencyDispatchResult(true, shipment, sourceWh, batch, allocatedCrates, vehicle, successMsg);
     }

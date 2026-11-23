@@ -8,12 +8,8 @@ import pharmatrack.temperature.model.PharmaceuticalProduct;
 import pharmatrack.temperature.model.TemperaturePolicy;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing pharmaceutical products and their policy bindings.
- */
 public class ProductService {
     private final InMemoryDataStore dataStore;
     private final TemperaturePolicyService policyService;
@@ -23,8 +19,7 @@ public class ProductService {
         this.policyService = policyService;
     }
 
-    public PharmaceuticalProduct registerProduct(String productId, String name, String category,
-                                                 String description, String policyId) {
+    public PharmaceuticalProduct registerProduct(String productId, String name, String category,String description, String policyId) {
         if (productId == null || productId.trim().isEmpty()) {
             productId = IdGenerator.nextId("PRD");
         }
@@ -53,11 +48,8 @@ public class ProductService {
             return getAllProducts();
         }
         String lowerQuery = query.trim().toLowerCase();
-        return dataStore.getProducts().values().stream()
-                .filter(p -> p.getProductId().toLowerCase().contains(lowerQuery) ||
-                             p.getName().toLowerCase().contains(lowerQuery) ||
-                             p.getCategory().toLowerCase().contains(lowerQuery))
-                .toList();
+        return dataStore.getProducts().values().stream().filter(p -> p.getProductId().toLowerCase().contains(lowerQuery) ||
+        p.getName().toLowerCase().contains(lowerQuery) || p.getCategory().toLowerCase().contains(lowerQuery)).toList();
     }
 
     public List<PharmaceuticalProduct> getAllProducts() {

@@ -9,12 +9,8 @@ import pharmatrack.logistics.model.Warehouse;
 import pharmatrack.storage.InMemoryDataStore;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-/**
- * Service managing geocoding, external OSRM road routing integration, checkpoint generation, and offline fallback routing.
- */
 public class RouteService {
     private final GeocodingService geocodingService;
     private final RoutingApiClient routingApiClient;
@@ -39,12 +35,10 @@ public class RouteService {
             throw new ApiException("At least one shipment is required to generate a route.");
         }
 
-        // Build list of delivery destinations
         List<CheckpointGenerator.DeliveryDestination> deliveryDests = new ArrayList<>();
         List<String> destCityNames = new ArrayList<>();
         List<double[]> waypoints = new ArrayList<>();
 
-        // Start point: source warehouse
         double[] sourceCoords = new double[]{sourceWarehouse.getLatitude(), sourceWarehouse.getLongitude()};
         waypoints.add(sourceCoords);
 
@@ -61,7 +55,6 @@ public class RouteService {
         double durationMinutes;
         List<double[]> geometryCoordinates = new ArrayList<>();
 
-        // Attempt external OSRM call
         try {
             String jsonResponse = routingApiClient.fetchRouteJson(waypoints);
             RouteResponseParser.ParsedRouteData parsed = routeResponseParser.parseOsrmResponse(jsonResponse);
@@ -69,7 +62,6 @@ public class RouteService {
             durationMinutes = parsed.durationMinutes;
             geometryCoordinates.addAll(parsed.geometryCoordinates);
         } catch (Exception ex) {
-            // High-fidelity fallback calculation using road network detour factor (~1.25x Haversine road distance)
             distanceKm = 0.0;
             double prevLat = sourceCoords[0];
             double prevLon = sourceCoords[1];
@@ -81,14 +73,12 @@ public class RouteService {
             }
             durationMinutes = (distanceKm / 60.0) * 60.0; // Assuming 60 km/h average road speed
 
-            // Interpolate points for fallback geometry
             geometryCoordinates.add(sourceCoords);
             for (double[] pt : waypoints.subList(1, waypoints.size())) {
                 geometryCoordinates.add(pt);
             }
         }
 
-        // Generate checkpoints
         List<RouteCheckpoint> checkpoints = checkpointGenerator.generateCheckpoints(
                 sourceWarehouse.getName(), sourceCoords[0], sourceCoords[1],
                 deliveryDests, geometryCoordinates, dispatchTime);

@@ -7,9 +7,6 @@ import pharmatrack.common.util.InputValidator;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Event recorded when a temperature reading falls outside the permitted policy range.
- */
 public class TemperatureExcursion {
     private final String excursionId;
     private final String crateId;

@@ -7,9 +7,6 @@ import pharmatrack.common.util.InputValidator;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Temperature sensor attached to a crate for continuous cold-chain monitoring.
- */
 public class Sensor {
     private final String sensorId;
     private String crateId;

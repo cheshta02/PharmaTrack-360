@@ -11,19 +11,13 @@ import pharmatrack.temperature.service.ProductBatchService;
 
 import java.time.LocalDateTime;
 
-/**
- * Manages destination arrival, independent shipment unloading, and initiation of crate return.
- */
 public class DeliveryService {
     private final InMemoryDataStore dataStore;
     private final CrateService crateService;
     private final ProductBatchService batchService;
     private final VehicleService vehicleService;
 
-    public DeliveryService(InMemoryDataStore dataStore,
-                           CrateService crateService,
-                           ProductBatchService batchService,
-                           VehicleService vehicleService) {
+    public DeliveryService(InMemoryDataStore dataStore, CrateService crateService, ProductBatchService batchService, VehicleService vehicleService) {
         this.dataStore = dataStore;
         this.crateService = crateService;
         this.batchService = batchService;
@@ -41,19 +35,16 @@ public class DeliveryService {
         }
 
         if (shipment.getStatus() == ShipmentStatus.DELIVERED) {
-            return; // Already delivered
+            return; 
         }
 
-        // 1. Mark shipment delivered
         shipment.transitionStatus(ShipmentStatus.DELIVERED);
         shipment.setDeliveryTime(deliveryTime);
 
-        // 2. Deduct batch inventory permanently
         if (shipment.getBatchId() != null) {
             batchService.deductBatchStock(shipment.getBatchId(), shipment.getRequiredQuantity());
         }
 
-        // 3. Unload crates and initiate return process
         for (String cId : shipment.getAllocatedCrateIds()) {
             Crate c = crateService.findCrateById(cId).orElse(null);
             if (c != null) {
@@ -61,7 +52,6 @@ public class DeliveryService {
             }
         }
 
-        // 4. Log event
         ShipmentEvent evt = new ShipmentEvent(
                 IdGenerator.nextId("EVT"), "ShipmentDeliveredEvent",
                 shipmentId, shipment.getAssignedTripId(), null,
@@ -69,13 +59,10 @@ public class DeliveryService {
                         shipmentId, shipment.getDestinationCity()));
         dataStore.addEvent(evt);
 
-        // 5. Check if all shipments on the associated trip have completed delivery
         String tripId = shipment.getAssignedTripId();
         if (tripId != null && dataStore.getVehicleTrips().containsKey(tripId)) {
             VehicleTrip trip = dataStore.getVehicleTrips().get(tripId);
-            boolean allDelivered = trip.getShipmentIds().stream()
-                    .map(id -> dataStore.getShipments().get(id))
-                    .allMatch(s -> s != null && s.getStatus() == ShipmentStatus.DELIVERED);
+            boolean allDelivered = trip.getShipmentIds().stream().map(id -> dataStore.getShipments().get(id)).allMatch(s -> s != null && s.getStatus() == ShipmentStatus.DELIVERED);
 
             if (allDelivered) {
                 if (trip.getStatus() == TripStatus.IN_TRANSIT || trip.getStatus() == TripStatus.DISPATCHED) {

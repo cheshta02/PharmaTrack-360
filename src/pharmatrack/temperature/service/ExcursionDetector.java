@@ -6,17 +6,12 @@ import pharmatrack.temperature.model.*;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Evaluates temperature readings against applicable policies and detects excursions per individual crate.
- */
 public class ExcursionDetector {
     private final InMemoryDataStore dataStore;
-    // Track ongoing excursions to compute continuous excursion durations: crateId -> ongoing excursion
+
     private final ConcurrentHashMap<String, TemperatureExcursion> ongoingExcursions = new ConcurrentHashMap<>();
 
     public ExcursionDetector(InMemoryDataStore dataStore) {
@@ -36,9 +31,8 @@ public class ExcursionDetector {
         }
     }
 
-    public Optional<TemperatureExcursion> checkAndRecordExcursion(
-            String crateId, String sensorId, String batchId, String shipmentId,
-            String tripId, double temperature, TemperaturePolicy policy, LocalDateTime timestamp) {
+    public Optional<TemperatureExcursion> checkAndRecordExcursion(String crateId, String sensorId, String batchId, String shipmentId,
+        String tripId, double temperature, TemperaturePolicy policy, LocalDateTime timestamp) {
 
         if (policy == null) {
             return Optional.empty();
@@ -48,11 +42,9 @@ public class ExcursionDetector {
 
         if (status == TemperatureStatus.ABOVE_RANGE || status == TemperatureStatus.BELOW_RANGE) {
             String excursionId = IdGenerator.nextId("EXC");
-            TemperatureExcursion excursion = new TemperatureExcursion(
-                    excursionId, crateId, sensorId, batchId, shipmentId, tripId,
-                    temperature, policy.getMinTemp(), policy.getMaxTemp(), timestamp, status, 0);
+            TemperatureExcursion excursion = new TemperatureExcursion(excursionId, crateId, sensorId, batchId, shipmentId, tripId,
+                temperature, policy.getMinTemp(), policy.getMaxTemp(), timestamp, status, 0);
 
-            // Compute duration if this is an extension of an ongoing excursion
             TemperatureExcursion previous = ongoingExcursions.get(crateId);
             if (previous != null && previous.getExcursionType() == status) {
                 long durationSec = Duration.between(previous.getTimestamp(), timestamp).getSeconds();
@@ -64,7 +56,6 @@ public class ExcursionDetector {
             dataStore.getExcursions().add(excursion);
             return Optional.of(excursion);
         } else {
-            // Temperature returned to normal -> clear ongoing excursion tracker for this crate
             ongoingExcursions.remove(crateId);
             return Optional.empty();
         }
@@ -75,14 +66,10 @@ public class ExcursionDetector {
     }
 
     public List<TemperatureExcursion> getExcursionsByCrate(String crateId) {
-        return dataStore.getExcursions().stream()
-                .filter(e -> e.getCrateId().equals(crateId))
-                .toList();
+        return dataStore.getExcursions().stream().filter(e -> e.getCrateId().equals(crateId)).toList();
     }
 
     public List<TemperatureExcursion> getExcursionsByShipment(String shipmentId) {
-        return dataStore.getExcursions().stream()
-                .filter(e -> shipmentId != null && shipmentId.equals(e.getShipmentId()))
-                .toList();
+        return dataStore.getExcursions().stream().filter(e -> shipmentId != null && shipmentId.equals(e.getShipmentId())).toList();
     }
 }

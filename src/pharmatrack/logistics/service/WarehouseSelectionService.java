@@ -19,10 +19,6 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 
-/**
- * Evaluates source warehouses based on product batch stock, crate compatibility, vehicle availability,
- * and delivery deadline feasibility to select the nearest FEASIBLE warehouse.
- */
 public class WarehouseSelectionService {
     private final InMemoryDataStore dataStore;
     private final WarehouseService warehouseService;
@@ -44,13 +40,7 @@ public class WarehouseSelectionService {
         private final String explanation;
         private final List<String> evaluationLogs;
 
-        public WarehouseFeasibilityResult(Warehouse selectedWarehouse,
-                                          ProductBatch selectedBatch,
-                                          List<Crate> compatibleCrates,
-                                          Vehicle availableVehicle,
-                                          boolean feasible,
-                                          String explanation,
-                                          List<String> evaluationLogs) {
+        public WarehouseFeasibilityResult(Warehouse selectedWarehouse, ProductBatch selectedBatch, List<Crate> compatibleCrates, Vehicle availableVehicle, boolean feasible, String explanation, List<String> evaluationLogs) {
             this.selectedWarehouse = selectedWarehouse;
             this.selectedBatch = selectedBatch;
             this.compatibleCrates = compatibleCrates != null ? compatibleCrates : Collections.emptyList();
@@ -89,16 +79,7 @@ public class WarehouseSelectionService {
         }
     }
 
-    public WarehouseSelectionService(InMemoryDataStore dataStore,
-                                     WarehouseService warehouseService,
-                                     WarehouseInventoryService inventoryService,
-                                     ProductService productService,
-                                     ProductBatchService batchService,
-                                     TemperaturePolicyService policyService,
-                                     CrateInventoryService crateInventoryService,
-                                     VehicleService vehicleService,
-                                     VehicleCompatibilityValidator vehicleValidator,
-                                     GeocodingService geocodingService) {
+    public WarehouseSelectionService(InMemoryDataStore dataStore, WarehouseService warehouseService, WarehouseInventoryService inventoryService, ProductService productService, ProductBatchService batchService, TemperaturePolicyService policyService, CrateInventoryService crateInventoryService, VehicleService vehicleService, VehicleCompatibilityValidator vehicleValidator, GeocodingService geocodingService) {
         this.dataStore = dataStore;
         this.warehouseService = warehouseService;
         this.inventoryService = inventoryService;
@@ -111,9 +92,7 @@ public class WarehouseSelectionService {
         this.geocodingService = geocodingService;
     }
 
-    public WarehouseFeasibilityResult selectFeasibleWarehouse(
-            String destinationCity, String productId, int requiredQuantity, int requiredCrates,
-            LocalDateTime deliveryDeadline) {
+    public WarehouseFeasibilityResult selectFeasibleWarehouse(String destinationCity, String productId, int requiredQuantity, int requiredCrates, LocalDateTime deliveryDeadline) {
 
         List<String> logs = new ArrayList<>();
         double[] destCoords = geocodingService.geocode(destinationCity);
@@ -129,19 +108,16 @@ public class WarehouseSelectionService {
             return new WarehouseFeasibilityResult(null, null, null, null, false, "No warehouses available.", logs);
         }
 
-        // Sort warehouses by geographic road distance to destination
-        allWarehouses.sort(Comparator.comparingDouble(wh ->
-                CheckpointGenerator.haversineDistanceKm(wh.getLatitude(), wh.getLongitude(), destCoords[0], destCoords[1])));
+        allWarehouses.sort(Comparator.comparingDouble(wh -> CheckpointGenerator.haversineDistanceKm(wh.getLatitude(), wh.getLongitude(), destCoords[0], destCoords[1])));
 
         logs.add(String.format("Evaluating %d warehouses for order: Product %s, Qty: %d, Crates: %d -> %s",
-                allWarehouses.size(), productId, requiredQuantity, requiredCrates, destinationCity));
+            allWarehouses.size(), productId, requiredQuantity, requiredCrates, destinationCity));
 
         for (Warehouse wh : allWarehouses) {
             String whId = wh.getWarehouseId();
             double distKm = CheckpointGenerator.haversineDistanceKm(wh.getLatitude(), wh.getLongitude(), destCoords[0], destCoords[1]);
             logs.add(String.format("Evaluating %s (%s) - Air distance: %.1f km", whId, wh.getCity(), distKm));
 
-            // 1 & 2. Check batch stock eligibility
             List<ProductBatch> eligibleBatches = inventoryService.getAvailableBatches(whId, productId, requiredQuantity);
             if (eligibleBatches.isEmpty()) {
                 logs.add(String.format("  [Rejected] %s: Insufficient non-expired/unblocked stock of product %s (Required: %d, Available: %d)",
@@ -150,15 +126,12 @@ public class WarehouseSelectionService {
             }
             ProductBatch chosenBatch = eligibleBatches.get(0);
 
-            // 3. Check compatible available crates
             List<Crate> compatibleCrates = crateInventoryService.findCompatibleAvailableCrates(whId, policy, requiredCrates);
             if (compatibleCrates.size() < requiredCrates) {
-                logs.add(String.format("  [Rejected] %s: Insufficient compatible available crates for policy %s (Needed: %d, Found: %d)",
-                        whId, policy.getPolicyId(), requiredCrates, compatibleCrates.size()));
+                logs.add(String.format("  [Rejected] %s: Insufficient compatible available crates for policy %s (Needed: %d, Found: %d)", whId, policy.getPolicyId(), requiredCrates, compatibleCrates.size()));
                 continue;
             }
 
-            // 4. Check available vehicle
             List<Vehicle> availableVehicles = vehicleService.getAvailableVehiclesByWarehouse(whId);
             if (availableVehicles.isEmpty()) {
                 logs.add(String.format("  [Rejected] %s: No available vehicles currently stationed at warehouse.", whId));
@@ -166,7 +139,6 @@ public class WarehouseSelectionService {
             }
             Vehicle chosenVehicle = availableVehicles.get(0);
 
-            // 5. Check vehicle capacity and compatibility
             try {
                 vehicleValidator.validateVehicleForDispatch(chosenVehicle, whId, compatibleCrates);
             } catch (Exception ex) {
@@ -174,18 +146,16 @@ public class WarehouseSelectionService {
                 continue;
             }
 
-            // 6. Check delivery deadline feasibility
             if (deliveryDeadline != null) {
                 double estTravelHours = (distKm * 1.25) / 60.0; // 60 km/h average road speed with winding factor
                 long hoursToDeadline = ChronoUnit.HOURS.between(LocalDateTime.now(), deliveryDeadline);
                 if (hoursToDeadline < 0 || estTravelHours > hoursToDeadline) {
                     logs.add(String.format("  [Rejected] %s: Travel duration (est. %.1f hrs) exceeds deadline window (%.1f hrs)",
-                            whId, estTravelHours, (double) hoursToDeadline));
+                        whId, estTravelHours, (double) hoursToDeadline));
                     continue;
                 }
             }
 
-            // All feasibility checks passed!
             String explanation = String.format("Selected nearest feasible warehouse %s (%s, %.1f km) with %d units stock, %d compatible crates, and available vehicle %s.",
                     whId, wh.getCity(), distKm, chosenBatch.getAvailableQuantity(), compatibleCrates.size(), chosenVehicle.getVehicleId());
             logs.add("  [SUCCESS] " + explanation);

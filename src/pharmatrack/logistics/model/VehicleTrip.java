@@ -7,15 +7,8 @@ import pharmatrack.common.exception.ValidationException;
 import pharmatrack.common.util.InputValidator;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
-/**
- * Operates a consolidated or single-order transportation mission using one vehicle.
- * A trip contains up to 5 crates across one or more shipments originating from the same warehouse.
- */
 public class VehicleTrip {
     private final String tripId;
     private final String vehicleId;
@@ -65,8 +58,7 @@ public class VehicleTrip {
         this.currentCheckpointIndex = currentCheckpointIndex;
     }
 
-    public VehicleTrip(String tripId, String vehicleId, String sourceWarehouseId,
-                       List<String> shipmentIds, List<String> crateIds, int totalCrates) {
+    public VehicleTrip(String tripId, String vehicleId, String sourceWarehouseId, List<String> shipmentIds, List<String> crateIds, int totalCrates) {
         this(tripId, vehicleId, sourceWarehouseId, shipmentIds, crateIds, null, totalCrates,
                 TripStatus.PLANNED, null, null, null, 0);
     }

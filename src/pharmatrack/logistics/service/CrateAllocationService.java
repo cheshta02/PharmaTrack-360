@@ -10,12 +10,8 @@ import pharmatrack.temperature.model.TemperaturePolicy;
 import pharmatrack.temperature.service.CrateInventoryService;
 import pharmatrack.temperature.service.CrateService;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-/**
- * Service handling crate allocation, reservation, and rollback for shipments.
- */
 public class CrateAllocationService {
     private final InMemoryDataStore dataStore;
     private final CrateService crateService;

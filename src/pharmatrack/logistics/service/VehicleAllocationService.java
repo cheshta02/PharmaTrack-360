@@ -8,9 +8,6 @@ import pharmatrack.temperature.model.Crate;
 
 import java.util.List;
 
-/**
- * Service managing assignment of transport vehicles to prepared trips.
- */
 public class VehicleAllocationService {
     private final VehicleService vehicleService;
     private final VehicleCompatibilityValidator compatibilityValidator;
@@ -28,9 +25,8 @@ public class VehicleAllocationService {
             throw new ValidationException("Trip must have assigned crates.");
         }
         if (assignedCrates.size() > Vehicle.MAX_CRATE_CAPACITY) {
-            throw new ResourceUnavailableException(String.format(
-                    "Exceeds max vehicle capacity: requested %d crates, max is %d.",
-                    assignedCrates.size(), Vehicle.MAX_CRATE_CAPACITY));
+            throw new ResourceUnavailableException(String.format("Exceeds max vehicle capacity: requested %d crates, max is %d.",
+            assignedCrates.size(), Vehicle.MAX_CRATE_CAPACITY));
         }
 
         List<Vehicle> available = vehicleService.getAvailableVehiclesByWarehouse(sourceWarehouseId);

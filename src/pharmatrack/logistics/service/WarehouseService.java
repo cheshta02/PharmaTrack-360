@@ -7,13 +7,8 @@ import pharmatrack.logistics.model.Warehouse;
 import pharmatrack.logistics.model.WarehouseInventory;
 import pharmatrack.storage.InMemoryDataStore;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing regional warehouse facilities.
- */
 public class WarehouseService {
     private final InMemoryDataStore dataStore;
 
@@ -45,18 +40,13 @@ public class WarehouseService {
 
     public Optional<Warehouse> findWarehouseByCity(String city) {
         if (city == null) return Optional.empty();
-        return dataStore.getWarehouses().values().stream()
-                .filter(w -> w.getCity().equalsIgnoreCase(city.trim()))
-                .findFirst();
+        return dataStore.getWarehouses().values().stream().filter(w -> w.getCity().equalsIgnoreCase(city.trim())).findFirst();
     }
 
     public List<Warehouse> getAllWarehouses() {
         return new ArrayList<>(dataStore.getWarehouses().values());
     }
 
-    /**
-     * Seeds the mandatory five demonstration warehouses: Delhi, Mumbai, Kolkata, Chennai, Bengaluru.
-     */
     public void seedDefaultWarehouses() {
         if (dataStore.getWarehouses().isEmpty()) {
             registerWarehouse("WH001", "Delhi Central Distribution Hub", "Delhi", 28.6139, 77.2090);

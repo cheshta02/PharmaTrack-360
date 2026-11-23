@@ -9,9 +9,7 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.List;
 
-/**
- * External road routing API client connecting to OSRM (Open Source Routing Machine).
- */
+
 public class RoutingApiClient {
     private static final String OSRM_BASE_URL = "http://router.project-osrm.org/route/v1/driving/";
     private final HttpClient httpClient;
@@ -28,10 +26,6 @@ public class RoutingApiClient {
         this.httpClient = client;
     }
 
-    /**
-     * Calls OSRM route service for a sequence of points [lat, lon].
-     * Coordinates are formatted as {lon},{lat};{lon},{lat}...
-     */
     public String fetchRouteJson(List<double[]> waypoints) {
         if (httpClient == null) {
             throw new ApiException("HTTP client unavailable (offline / sandbox environment).");

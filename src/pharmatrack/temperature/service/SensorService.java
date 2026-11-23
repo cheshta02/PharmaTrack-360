@@ -9,13 +9,8 @@ import pharmatrack.temperature.model.Sensor;
 import pharmatrack.temperature.model.SensorStatus;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing temperature sensors attached to crates.
- */
 public class SensorService {
     private final InMemoryDataStore dataStore;
     private final CrateService crateService;
@@ -51,9 +46,7 @@ public class SensorService {
 
     public Optional<Sensor> findSensorByCrateId(String crateId) {
         if (crateId == null) return Optional.empty();
-        return dataStore.getSensors().values().stream()
-                .filter(s -> crateId.equals(s.getCrateId()))
-                .findFirst();
+        return dataStore.getSensors().values().stream().filter(s -> crateId.equals(s.getCrateId())).findFirst();
     }
 
     public List<Sensor> getAllSensors() {

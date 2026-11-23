@@ -8,9 +8,6 @@ import pharmatrack.common.util.InputValidator;
 import java.time.LocalDate;
 import java.util.Objects;
 
-/**
- * Represents a physical manufacturing batch of a pharmaceutical product stored at a specific warehouse.
- */
 public class ProductBatch {
     private final String batchId;
     private final String productId;
@@ -167,7 +164,6 @@ public class ProductBatch {
 
     @Override
     public String toString() {
-        return String.format("%s: Product %s at %s [Avail: %d, Res: %d, Total: %d, Exp: %s, Blocked: %s]",
-                batchId, productId, warehouseId, getAvailableQuantity(), reservedQuantity, totalQuantity, expiryDate, blocked);
+        return String.format("%s: Product %s at %s [Avail: %d, Res: %d, Total: %d, Exp: %s, Blocked: %s]", batchId, productId, warehouseId, getAvailableQuantity(), reservedQuantity, totalQuantity, expiryDate, blocked);
     }
 }

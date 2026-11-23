@@ -9,13 +9,8 @@ import pharmatrack.temperature.model.PharmaceuticalProduct;
 import pharmatrack.temperature.model.ProductBatch;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing physical manufacturing batches of pharmaceutical products and stock reservations.
- */
 public class ProductBatchService {
     private final InMemoryDataStore dataStore;
     private final ProductService productService;
@@ -25,8 +20,7 @@ public class ProductBatchService {
         this.productService = productService;
     }
 
-    public ProductBatch registerBatch(String batchId, String productId, LocalDate mfgDate, LocalDate expiryDate,
-                                      int totalQuantity, String warehouseId) {
+    public ProductBatch registerBatch(String batchId, String productId, LocalDate mfgDate, LocalDate expiryDate,int totalQuantity, String warehouseId) {
         if (batchId == null || batchId.trim().isEmpty()) {
             batchId = IdGenerator.nextId("BAT");
         }
@@ -44,7 +38,6 @@ public class ProductBatchService {
         ProductBatch batch = new ProductBatch(batchId, productId, mfgDate, expiryDate, totalQuantity, warehouseId);
         dataStore.getBatches().put(batchId, batch);
 
-        // Update warehouse inventory association if warehouse exists
         if (dataStore.getWarehouseInventories().containsKey(warehouseId)) {
             dataStore.getWarehouseInventories().get(warehouseId).addBatch(batchId);
         }
@@ -58,15 +51,11 @@ public class ProductBatchService {
     }
 
     public List<ProductBatch> getBatchesByProduct(String productId) {
-        return dataStore.getBatches().values().stream()
-                .filter(b -> b.getProductId().equals(productId))
-                .toList();
+        return dataStore.getBatches().values().stream().filter(b -> b.getProductId().equals(productId)).toList();
     }
 
     public List<ProductBatch> getBatchesByWarehouse(String warehouseId) {
-        return dataStore.getBatches().values().stream()
-                .filter(b -> b.getWarehouseId().equals(warehouseId))
-                .toList();
+        return dataStore.getBatches().values().stream().filter(b -> b.getWarehouseId().equals(warehouseId)).toList();
     }
 
     public List<ProductBatch> getAllBatches() {
@@ -74,8 +63,7 @@ public class ProductBatchService {
     }
 
     public void reserveBatchStock(String batchId, int quantity) {
-        ProductBatch batch = findBatchById(batchId)
-                .orElseThrow(() -> new ValidationException("Batch with ID " + batchId + " not found."));
+        ProductBatch batch = findBatchById(batchId).orElseThrow(() -> new ValidationException("Batch with ID " + batchId + " not found."));
 
         if (batch.isBlocked()) {
             throw new ResourceUnavailableException("Batch " + batchId + " is blocked and cannot be allocated.");

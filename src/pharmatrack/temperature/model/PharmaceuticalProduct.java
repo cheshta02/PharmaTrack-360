@@ -6,9 +6,6 @@ import pharmatrack.common.util.InputValidator;
 
 import java.util.Objects;
 
-/**
- * Represents a regulated pharmaceutical product requiring specific cold-chain temperature conditions.
- */
 public class PharmaceuticalProduct {
     private final String productId;
     private String name;
@@ -95,7 +92,6 @@ public class PharmaceuticalProduct {
 
     @Override
     public String toString() {
-        return String.format("%s: %s (%s) [Policy: %s, active=%s]",
-                productId, name, category, policyId, active);
+        return String.format("%s: %s (%s) [Policy: %s, active=%s]", productId, name, category, policyId, active);
     }
 }

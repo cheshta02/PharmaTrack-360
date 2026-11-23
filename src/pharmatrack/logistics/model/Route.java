@@ -4,14 +4,8 @@ import pharmatrack.json.JsonCreator;
 import pharmatrack.json.JsonProperty;
 import pharmatrack.common.util.InputValidator;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
-/**
- * Road route connecting a source warehouse to one or more shipment delivery destinations.
- */
 public class Route {
     private final String routeId;
     private final String sourceCity;
@@ -45,8 +39,7 @@ public class Route {
         }
     }
 
-    public Route(String routeId, String sourceCity, List<String> destinationCities,
-                 double distanceKm, double estimatedDurationMinutes) {
+    public Route(String routeId, String sourceCity, List<String> destinationCities, double distanceKm, double estimatedDurationMinutes) {
         this(routeId, sourceCity, destinationCities, distanceKm, estimatedDurationMinutes, null, null);
     }
 

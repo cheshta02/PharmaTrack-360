@@ -4,12 +4,8 @@ import pharmatrack.json.JsonNode;
 import pharmatrack.json.ObjectMapper;
 import pharmatrack.common.exception.ApiException;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-/**
- * Parses JSON responses from external OSRM road routing API.
- */
 public class RouteResponseParser {
     private final ObjectMapper objectMapper = new ObjectMapper();
 

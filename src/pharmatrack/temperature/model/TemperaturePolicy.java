@@ -7,9 +7,6 @@ import pharmatrack.common.util.InputValidator;
 import java.time.LocalDate;
 import java.util.Objects;
 
-/**
- * Represents a temperature policy governing storage and transit requirements for pharmaceutical products.
- */
 public class TemperaturePolicy {
     private final String policyId;
     private String name;
@@ -132,7 +129,6 @@ public class TemperaturePolicy {
 
     @Override
     public String toString() {
-        return String.format("%s: %s [%.1f%s to %.1f%s] (v%s, active=%s)",
-                policyId, name, minTemp, unit, maxTemp, unit, version, active);
+        return String.format("%s: %s [%.1f%s to %.1f%s] (v%s, active=%s)", policyId, name, minTemp, unit, maxTemp, unit, version, active);
     }
 }

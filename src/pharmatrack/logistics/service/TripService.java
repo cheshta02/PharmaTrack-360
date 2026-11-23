@@ -10,13 +10,8 @@ import pharmatrack.temperature.model.CrateStatus;
 import pharmatrack.temperature.service.CrateService;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing vehicle trip creation, loading validation, dispatching, and lifecycle progression.
- */
 public class TripService {
     private final InMemoryDataStore dataStore;
     private final CrateService crateService;
@@ -24,11 +19,7 @@ public class TripService {
     private final RouteService routeService;
     private final ShipmentValidator shipmentValidator;
 
-    public TripService(InMemoryDataStore dataStore,
-                       CrateService crateService,
-                       VehicleService vehicleService,
-                       RouteService routeService,
-                       ShipmentValidator shipmentValidator) {
+    public TripService(InMemoryDataStore dataStore, CrateService crateService, VehicleService vehicleService, RouteService routeService, ShipmentValidator shipmentValidator) {
         this.dataStore = dataStore;
         this.crateService = crateService;
         this.vehicleService = vehicleService;
@@ -47,7 +38,6 @@ public class TripService {
             throw new ValidationException("Vehicle cannot be null.");
         }
 
-        // Validate all shipments belong to this warehouse and have allocated crates
         List<String> shipmentIds = new ArrayList<>();
         List<String> allCrateIds = new ArrayList<>();
         int totalCrates = 0;
@@ -56,7 +46,7 @@ public class TripService {
             shipmentValidator.validateForDispatch(s);
             if (!s.getSourceWarehouseId().equals(sourceWarehouseId)) {
                 throw new ValidationException(String.format("Shipment %s source warehouse (%s) does not match trip source (%s).",
-                        s.getShipmentId(), s.getSourceWarehouseId(), sourceWarehouseId));
+                    s.getShipmentId(), s.getSourceWarehouseId(), sourceWarehouseId));
             }
             shipmentIds.add(s.getShipmentId());
             allCrateIds.addAll(s.getAllocatedCrateIds());
@@ -65,13 +55,12 @@ public class TripService {
 
         if (totalCrates > Vehicle.MAX_CRATE_CAPACITY) {
             throw new ValidationException(String.format("Combined crate count (%d) exceeds vehicle max capacity (%d).",
-                    totalCrates, Vehicle.MAX_CRATE_CAPACITY));
+                totalCrates, Vehicle.MAX_CRATE_CAPACITY));
         }
 
         String tripId = IdGenerator.nextId("TRP");
         VehicleTrip trip = new VehicleTrip(tripId, vehicle.getVehicleId(), sourceWarehouseId, shipmentIds, allCrateIds, totalCrates);
 
-        // Associate trip with vehicle and crates
         vehicle.setCurrentTripId(tripId);
         vehicle.transitionStatus(VehicleStatus.LOADING);
 
@@ -87,7 +76,6 @@ public class TripService {
             s.setAssignedTripId(tripId);
         }
 
-        // Generate combined route
         Warehouse wh = dataStore.getWarehouses().get(sourceWarehouseId);
         Route route = routeService.generateRoute(wh, shipments, LocalDateTime.now());
         trip.setRoute(route);
@@ -137,10 +125,8 @@ public class TripService {
     }
 
     public List<VehicleTrip> getActiveTrips() {
-        return dataStore.getVehicleTrips().values().stream()
-                .filter(t -> t.getStatus() == TripStatus.PLANNED ||
+        return dataStore.getVehicleTrips().values().stream().filter(t -> t.getStatus() == TripStatus.PLANNED ||
                              t.getStatus() == TripStatus.DISPATCHED ||
-                             t.getStatus() == TripStatus.IN_TRANSIT)
-                .toList();
+                             t.getStatus() == TripStatus.IN_TRANSIT).toList();
     }
 }

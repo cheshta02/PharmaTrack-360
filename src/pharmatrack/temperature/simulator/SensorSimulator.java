@@ -3,19 +3,12 @@ package pharmatrack.temperature.simulator;
 import pharmatrack.logistics.model.Shipment;
 import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.model.*;
-import pharmatrack.temperature.service.ProductService;
-import pharmatrack.temperature.service.SensorHealthMonitor;
-import pharmatrack.temperature.service.TemperatureMonitor;
-import pharmatrack.temperature.service.TemperaturePolicyService;
+import pharmatrack.temperature.service.*;
 
 import java.time.LocalDateTime;
-import java.util.Random;
-import java.util.concurrent.*;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Periodically generates realistic and deterministic temperature sensor readings.
- * Supports simulation of normal conditions, gradual trends, spikes, drops, sensor failures, and invalid outputs.
- */
 public class SensorSimulator {
     private final InMemoryDataStore dataStore;
     private final TemperatureMonitor temperatureMonitor;
@@ -30,20 +23,15 @@ public class SensorSimulator {
     });
 
     private ScheduledFuture<?> scheduledTask;
-    private final Random random = new Random(42); // Seeded for deterministic test reproducibility
+    private final Random random = new Random(42); 
     private boolean running = false;
 
-    // Deterministic state overrides per crate
     private final ConcurrentHashMap<String, Double> temperatureOverrides = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<String, Double> gradualTrends = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<String, Integer> trendRemainingCycles = new ConcurrentHashMap<>();
     private final ConcurrentHashMap<String, Boolean> invalidOutputSensors = new ConcurrentHashMap<>();
 
-    public SensorSimulator(InMemoryDataStore dataStore,
-                           TemperatureMonitor temperatureMonitor,
-                           SensorHealthMonitor sensorHealthMonitor,
-                           ProductService productService,
-                           TemperaturePolicyService policyService) {
+    public SensorSimulator(InMemoryDataStore dataStore, TemperatureMonitor temperatureMonitor, SensorHealthMonitor sensorHealthMonitor, ProductService productService, TemperaturePolicyService policyService) {
         this.dataStore = dataStore;
         this.temperatureMonitor = temperatureMonitor;
         this.sensorHealthMonitor = sensorHealthMonitor;
@@ -74,9 +62,6 @@ public class SensorSimulator {
         return running;
     }
 
-    /**
-     * Executes one simulation cycle across all registered sensors and crates.
-     */
     public void tick() {
         try {
             LocalDateTime now = LocalDateTime.now();
@@ -88,22 +73,17 @@ public class SensorSimulator {
                 Sensor sensor = dataStore.getSensors().get(sensorId);
                 if (sensor == null) continue;
 
-                // Check if sensor is explicitly FAULTY or communication failed
                 if (sensor.getStatus() == SensorStatus.FAULTY) {
-                    continue; // No readings emitted
+                    continue; 
                 }
 
-                // Check for invalid output condition
                 if (Boolean.TRUE.equals(invalidOutputSensors.get(sensorId))) {
-                    // Emit reading with impossible NaN / invalid value
                     temperatureMonitor.processReading(sensorId, crate.getCrateId(), 9999.0, now);
                     continue;
                 }
 
-                // Determine target nominal temperature
                 double targetTemp = determineNominalTemperature(crate);
 
-                // Apply gradual trend if active
                 if (gradualTrends.containsKey(crate.getCrateId())) {
                     double delta = gradualTrends.get(crate.getCrateId());
                     int remaining = trendRemainingCycles.getOrDefault(crate.getCrateId(), 0);
@@ -118,12 +98,10 @@ public class SensorSimulator {
                     }
                 }
 
-                // Check for override (spike / drop / manual test injection)
                 double readingVal;
                 if (temperatureOverrides.containsKey(crate.getCrateId())) {
                     readingVal = temperatureOverrides.get(crate.getCrateId());
                 } else {
-                    // Normal random fluctuation (+/- 0.3°C)
                     double jitter = (random.nextDouble() * 0.6) - 0.3;
                     readingVal = targetTemp + jitter;
                 }
@@ -131,7 +109,6 @@ public class SensorSimulator {
                 temperatureMonitor.processReading(sensorId, crate.getCrateId(), readingVal, now);
             }
 
-            // Update sensor communication health evaluation
             sensorHealthMonitor.evaluateAllSensors();
 
         } catch (Exception e) {
@@ -156,7 +133,6 @@ public class SensorSimulator {
         return (crate.getMinTempCapability() + crate.getMaxTempCapability()) / 2.0;
     }
 
-    // Deterministic test injection helpers:
     public void injectSpike(String crateId, double spikeTemperature) {
         temperatureOverrides.put(crateId, spikeTemperature);
     }

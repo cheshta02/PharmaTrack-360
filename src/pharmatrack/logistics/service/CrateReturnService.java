@@ -14,9 +14,6 @@ import pharmatrack.temperature.service.CrateService;
 
 import java.time.LocalDateTime;
 
-/**
- * Manages post-delivery return transit, sanitation inspection, and restocking of crates and vehicles.
- */
 public class CrateReturnService {
     private final InMemoryDataStore dataStore;
     private final CrateService crateService;
@@ -64,7 +61,6 @@ public class CrateReturnService {
             v.setLastKnownLocation(trip.getSourceWarehouseId());
         }
 
-        // Process return and inspection for all crates on this trip
         for (String cId : trip.getCrateIds()) {
             processCrateInspection(cId);
         }

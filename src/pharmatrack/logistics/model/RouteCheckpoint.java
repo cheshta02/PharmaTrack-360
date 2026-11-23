@@ -7,9 +7,6 @@ import pharmatrack.common.util.InputValidator;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Waypoint or delivery stop along a vehicle trip route.
- */
 public class RouteCheckpoint {
     private final String checkpointId;
     private final String name;
@@ -46,8 +43,7 @@ public class RouteCheckpoint {
         this.status = status != null ? status : CheckpointStatus.PENDING;
     }
 
-    public RouteCheckpoint(String checkpointId, String name, double latitude, double longitude,
-                           double distanceFromStartKm, boolean deliveryStop, String associatedShipmentId) {
+    public RouteCheckpoint(String checkpointId, String name, double latitude, double longitude, double distanceFromStartKm, boolean deliveryStop, String associatedShipmentId) {
         this(checkpointId, name, latitude, longitude, distanceFromStartKm, deliveryStop, associatedShipmentId,
                 null, null, CheckpointStatus.PENDING);
     }

@@ -7,9 +7,6 @@ import pharmatrack.common.util.InputValidator;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * An individual temperature observation captured by a crate sensor.
- */
 public class TemperatureReading {
     private final String readingId;
     private final String sensorId;
@@ -76,7 +73,6 @@ public class TemperatureReading {
 
     @Override
     public String toString() {
-        return String.format("[%s] Reading %s: Crate %s, Sensor %s -> %.2f°C (%s)",
-                timestamp, readingId, crateId, sensorId, temperature, status);
+        return String.format("[%s] Reading %s: Crate %s, Sensor %s -> %.2f°C (%s)", timestamp, readingId, crateId, sensorId, temperature, status);
     }
 }

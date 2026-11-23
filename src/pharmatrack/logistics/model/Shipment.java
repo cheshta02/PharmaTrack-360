@@ -6,14 +6,8 @@ import pharmatrack.common.exception.InvalidStateTransitionException;
 import pharmatrack.common.util.InputValidator;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
-/**
- * Customer order/shipment requesting pharmaceutical product batch transport to a destination.
- */
 public class Shipment {
     private final String shipmentId;
     private final String orderRef;
@@ -73,9 +67,7 @@ public class Shipment {
         this.assignedTripId = assignedTripId;
     }
 
-    public Shipment(String shipmentId, String orderRef, String destinationCity, double destLat, double destLon,
-                    String productId, String batchId, int requiredQuantity, int requiredCrates,
-                    ShipmentPriority priority, LocalDateTime expectedDeliveryDeadline) {
+    public Shipment(String shipmentId, String orderRef, String destinationCity, double destLat, double destLon, String productId,     String batchId, int requiredQuantity, int requiredCrates, ShipmentPriority priority, LocalDateTime expectedDeliveryDeadline) {
         this(shipmentId, orderRef, destinationCity, destLat, destLon, productId, batchId, requiredQuantity,
                 requiredCrates, priority, expectedDeliveryDeadline, null, ShipmentStatus.PENDING,
                 LocalDateTime.now(), null, null, null);
@@ -195,8 +187,8 @@ public class Shipment {
 
         if (!valid) {
             throw new InvalidStateTransitionException(String.format(
-                    "Invalid shipment lifecycle transition for shipment %s: %s -> %s.",
-                    shipmentId, this.status, newStatus));
+                "Invalid shipment lifecycle transition for shipment %s: %s -> %s.",
+                shipmentId, this.status, newStatus));
         }
 
         this.status = newStatus;

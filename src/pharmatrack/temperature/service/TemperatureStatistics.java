@@ -3,13 +3,8 @@ package pharmatrack.temperature.service;
 import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.model.*;
 
-import java.util.DoubleSummaryStatistics;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Generates temperature reporting, summary metrics, and excursion analytics.
- */
 public class TemperatureStatistics {
     private final InMemoryDataStore dataStore;
     private final TemperatureMonitor temperatureMonitor;
@@ -20,9 +15,7 @@ public class TemperatureStatistics {
     }
 
     public List<TemperatureReading> getReadingsForCrate(String crateId) {
-        return dataStore.getReadings().stream()
-                .filter(r -> r.getCrateId().equals(crateId))
-                .toList();
+        return dataStore.getReadings().stream().filter(r -> r.getCrateId().equals(crateId)).toList();
     }
 
     public Optional<DoubleSummaryStatistics> getStatsForCrate(String crateId) {
@@ -30,20 +23,15 @@ public class TemperatureStatistics {
         if (readings.isEmpty()) {
             return Optional.empty();
         }
-        DoubleSummaryStatistics stats = readings.stream()
-                .filter(TemperatureReading::isValid)
-                .mapToDouble(TemperatureReading::getTemperature)
-                .summaryStatistics();
+        DoubleSummaryStatistics stats = readings.stream().filter(TemperatureReading::isValid).mapToDouble(TemperatureReading::getTemperature).summaryStatistics();
         return Optional.of(stats);
     }
 
     public List<Crate> getCratesOutsidePermittedRange() {
-        return dataStore.getCrates().values().stream()
-                .filter(c -> {
+        return dataStore.getCrates().values().stream().filter(c -> {
                     TemperatureStatus s = temperatureMonitor.getCurrentCrateStatus(c.getCrateId());
                     return s == TemperatureStatus.ABOVE_RANGE || s == TemperatureStatus.BELOW_RANGE;
-                })
-                .toList();
+                }).toList();
     }
 
     public String generateCratesCurrentTemperatureReport() {

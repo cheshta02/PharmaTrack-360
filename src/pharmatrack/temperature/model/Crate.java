@@ -7,10 +7,6 @@ import pharmatrack.common.util.InputValidator;
 
 import java.util.Objects;
 
-/**
- * Reusable pharmaceutical transportation container with validated operating temperature capabilities.
- * Follows strict lifecycle: AVAILABLE -> ALLOCATED -> LOADED -> IN_TRANSIT -> RETURNING -> INSPECTION -> AVAILABLE
- */
 public class Crate {
     private final String crateId;
     private double minTempCapability;
@@ -112,10 +108,6 @@ public class Crate {
         this.currentShipmentId = currentShipmentId;
     }
 
-    /**
-     * Checks if this crate's validated operating capability safely encompasses the policy's complete requirement.
-     * Rule: crate.minTempCapability <= policy.minTemp AND crate.maxTempCapability >= policy.maxTemp.
-     */
     public boolean isCompatibleWith(TemperaturePolicy policy) {
         if (policy == null || !policy.isActive()) {
             return false;
@@ -123,9 +115,6 @@ public class Crate {
         return this.minTempCapability <= policy.getMinTemp() && this.maxTempCapability >= policy.getMaxTemp();
     }
 
-    /**
-     * Validates and transitions the crate lifecycle status.
-     */
     public synchronized void transitionStatus(CrateStatus newStatus) {
         if (this.status == newStatus) {
             return;

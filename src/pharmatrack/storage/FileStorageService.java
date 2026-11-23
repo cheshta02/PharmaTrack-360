@@ -12,8 +12,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FileStorageService {
     private final String dataDirectory;
@@ -92,24 +91,18 @@ public class FileStorageService {
             vehicles.forEach(v -> {
                 store.getVehicles().put(v.getVehicleId(), v);
                 if (v.getHomeWarehouseId() != null) {
-                    store.getWarehouseInventories()
-                            .computeIfAbsent(v.getHomeWarehouseId(), WarehouseInventory::new)
-                            .addVehicle(v.getVehicleId());
+                    store.getWarehouseInventories().computeIfAbsent(v.getHomeWarehouseId(), WarehouseInventory::new).addVehicle(v.getVehicleId());
                 }
             });
         }
         for (ProductBatch b : store.getBatches().values()) {
             if (b.getWarehouseId() != null) {
-                store.getWarehouseInventories()
-                        .computeIfAbsent(b.getWarehouseId(), WarehouseInventory::new)
-                        .addBatch(b.getBatchId());
+                store.getWarehouseInventories().computeIfAbsent(b.getWarehouseId(), WarehouseInventory::new).addBatch(b.getBatchId());
             }
         }
         for (Crate c : store.getCrates().values()) {
             if (c.getWarehouseId() != null) {
-                store.getWarehouseInventories()
-                        .computeIfAbsent(c.getWarehouseId(), WarehouseInventory::new)
-                        .addCrate(c.getCrateId());
+                store.getWarehouseInventories().computeIfAbsent(c.getWarehouseId(), WarehouseInventory::new).addCrate(c.getCrateId());
             }
         }
 
@@ -118,9 +111,8 @@ public class FileStorageService {
             shipments.forEach(s -> {
                 store.getShipments().put(s.getShipmentId(), s);
                 if (s.getStatus() == ShipmentStatus.PENDING && s.getSourceWarehouseId() != null) {
-                    store.getWarehouseInventories()
-                            .computeIfAbsent(s.getSourceWarehouseId(), WarehouseInventory::new)
-                            .addPendingShipment(s.getShipmentId());
+                    store.getWarehouseInventories().computeIfAbsent(s.getSourceWarehouseId(), WarehouseInventory::new)
+                    .addPendingShipment(s.getShipmentId());
                 }
             });
         }
@@ -131,9 +123,8 @@ public class FileStorageService {
                 store.getVehicleTrips().put(t.getTripId(), t);
                 if (t.getStatus() == TripStatus.PLANNED || t.getStatus() == TripStatus.DISPATCHED || t.getStatus() == TripStatus.IN_TRANSIT) {
                     if (t.getSourceWarehouseId() != null) {
-                        store.getWarehouseInventories()
-                                .computeIfAbsent(t.getSourceWarehouseId(), WarehouseInventory::new)
-                                .addActiveTrip(t.getTripId());
+                        store.getWarehouseInventories().computeIfAbsent(t.getSourceWarehouseId(), WarehouseInventory::new)
+                        .addActiveTrip(t.getTripId());
                     }
                 }
             });

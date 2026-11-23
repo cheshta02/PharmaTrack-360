@@ -10,9 +10,6 @@ import pharmatrack.temperature.model.ProductBatch;
 
 import java.time.LocalDateTime;
 
-/**
- * Validates customer shipment registration requirements, batches, stock availability, and crate constraints.
- */
 public class ShipmentValidator {
     private final InMemoryDataStore dataStore;
 
@@ -20,9 +17,7 @@ public class ShipmentValidator {
         this.dataStore = dataStore;
     }
 
-    public void validateRegistration(String orderRef, String destinationCity, String productId,
-                                     String batchId, int requiredQuantity, int requiredCrates,
-                                     LocalDateTime deadline) {
+    public void validateRegistration(String orderRef, String destinationCity, String productId, String batchId, int requiredQuantity, int requiredCrates, LocalDateTime deadline) {
         InputValidator.requireNonEmpty(orderRef, "Order Reference");
         InputValidator.requireNonEmpty(destinationCity, "Destination City");
         InputValidator.requireNonEmpty(productId, "Product ID");
@@ -52,9 +47,7 @@ public class ShipmentValidator {
                 throw new ValidationException("Batch " + batchId + " is expired.");
             }
             if (batch.getAvailableQuantity() < requiredQuantity) {
-                throw new ValidationException(String.format(
-                        "Insufficient stock in batch %s: requested %d, available %d.",
-                        batchId, requiredQuantity, batch.getAvailableQuantity()));
+                throw new ValidationException(String.format("Insufficient stock in batch %s: requested %d, available %d.", batchId, requiredQuantity, batch.getAvailableQuantity()));
             }
         }
 
@@ -77,9 +70,8 @@ public class ShipmentValidator {
             throw new ValidationException("Shipment " + shipment.getShipmentId() + " has no crates allocated.");
         }
         if (shipment.getAllocatedCrateIds().size() != shipment.getRequiredCrates()) {
-            throw new ValidationException(String.format(
-                    "Shipment %s requires %d crates but has %d allocated.",
-                    shipment.getShipmentId(), shipment.getRequiredCrates(), shipment.getAllocatedCrateIds().size()));
+            throw new ValidationException(String.format("Shipment %s requires %d crates but has %d allocated.", 
+            shipment.getShipmentId(), shipment.getRequiredCrates(), shipment.getAllocatedCrateIds().size()));
         }
     }
 }

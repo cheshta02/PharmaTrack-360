@@ -6,9 +6,6 @@ import pharmatrack.common.util.InputValidator;
 
 import java.util.Objects;
 
-/**
- * Regional pharmaceutical warehouse facility.
- */
 public class Warehouse {
     private final String warehouseId;
     private String name;

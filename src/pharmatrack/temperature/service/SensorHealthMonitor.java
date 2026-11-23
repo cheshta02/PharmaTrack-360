@@ -4,14 +4,9 @@ import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.model.Sensor;
 import pharmatrack.temperature.model.SensorStatus;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.*;
+import java.util.*;
 
-/**
- * Monitors sensor communication health based on timestamp timeouts and explicit fault signals.
- */
 public class SensorHealthMonitor {
     private final InMemoryDataStore dataStore;
 
@@ -29,7 +24,6 @@ public class SensorHealthMonitor {
     public void evaluateSensorHealth(Sensor sensor, LocalDateTime evaluationTime) {
         if (sensor == null) return;
 
-        // If explicitly marked faulty, preserve faulty status
         if (sensor.getStatus() == SensorStatus.FAULTY) {
             return;
         }
@@ -49,21 +43,15 @@ public class SensorHealthMonitor {
     }
 
     public List<Sensor> getActiveSensors() {
-        return dataStore.getSensors().values().stream()
-                .filter(s -> s.getStatus() == SensorStatus.ACTIVE)
-                .toList();
+        return dataStore.getSensors().values().stream().filter(s -> s.getStatus() == SensorStatus.ACTIVE).toList();
     }
 
     public List<Sensor> getInactiveSensors() {
-        return dataStore.getSensors().values().stream()
-                .filter(s -> s.getStatus() == SensorStatus.INACTIVE)
-                .toList();
+        return dataStore.getSensors().values().stream().filter(s -> s.getStatus() == SensorStatus.INACTIVE).toList();
     }
 
     public List<Sensor> getFaultySensors() {
-        return dataStore.getSensors().values().stream()
-                .filter(s -> s.getStatus() == SensorStatus.FAULTY)
-                .toList();
+        return dataStore.getSensors().values().stream().filter(s -> s.getStatus() == SensorStatus.FAULTY).toList();
     }
 
     public String generateHealthReport() {

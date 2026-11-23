@@ -9,13 +9,8 @@ import pharmatrack.temperature.model.Crate;
 import pharmatrack.temperature.model.CrateStatus;
 import pharmatrack.temperature.model.TemperaturePolicy;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-/**
- * Service managing physical crate containers, lifecycle transitions, and temperature capability verification.
- */
 public class CrateService {
     private final InMemoryDataStore dataStore;
 
@@ -23,8 +18,7 @@ public class CrateService {
         this.dataStore = dataStore;
     }
 
-    public Crate registerCrate(String crateId, double minTempCapability, double maxTempCapability,
-                               double capacityLiters, String warehouseId) {
+    public Crate registerCrate(String crateId, double minTempCapability, double maxTempCapability, double capacityLiters, String warehouseId) {
         if (crateId == null || crateId.trim().isEmpty()) {
             crateId = IdGenerator.nextId("CR");
         }
@@ -38,7 +32,7 @@ public class CrateService {
         Crate crate = new Crate(crateId, minTempCapability, maxTempCapability, capacityLiters, warehouseId);
         dataStore.getCrates().put(crateId, crate);
 
-        // Register in warehouse inventory
+        
         if (dataStore.getWarehouseInventories().containsKey(warehouseId)) {
             dataStore.getWarehouseInventories().get(warehouseId).addCrate(crateId);
         }
@@ -56,21 +50,13 @@ public class CrateService {
     }
 
     public List<Crate> getCratesByWarehouse(String warehouseId) {
-        return dataStore.getCrates().values().stream()
-                .filter(c -> c.getWarehouseId().equals(warehouseId))
-                .toList();
+        return dataStore.getCrates().values().stream().filter(c -> c.getWarehouseId().equals(warehouseId)).toList();
     }
 
     public List<Crate> getAvailableCratesByWarehouse(String warehouseId) {
-        return dataStore.getCrates().values().stream()
-                .filter(c -> c.getWarehouseId().equals(warehouseId) && c.getStatus() == CrateStatus.AVAILABLE)
-                .toList();
+        return dataStore.getCrates().values().stream().filter(c -> c.getWarehouseId().equals(warehouseId) && c.getStatus() == CrateStatus.AVAILABLE).toList();
     }
 
-    /**
-     * Validates that crate operating capability safely covers the entire policy required range.
-     * Throws CompatibilityException if invalid.
-     */
     public void validateCompatibility(Crate crate, TemperaturePolicy policy) {
         if (crate == null) {
             throw new ValidationException("Crate cannot be null.");

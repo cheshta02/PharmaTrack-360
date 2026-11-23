@@ -9,24 +9,15 @@ import pharmatrack.storage.InMemoryDataStore;
 import pharmatrack.temperature.service.ProductBatchService;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
-import java.util.PriorityQueue;
+import java.util.*;
 
-/**
- * Service managing customer shipment registration, cancellation, and priority queue ordering.
- */
 public class ShipmentService {
     private final InMemoryDataStore dataStore;
     private final ShipmentValidator validator;
     private final ProductBatchService batchService;
 
-    // Strict priority ordering: EMERGENCY (1) -> URGENT (2) -> NORMAL (3), ties broken by registration timestamp (FIFO)
-    public static final Comparator<Shipment> PRIORITY_COMPARATOR = Comparator
-            .comparing((Shipment s) -> s.getPriority().getRank())
-            .thenComparing(Shipment::getRegistrationTime);
+    public static final Comparator<Shipment> PRIORITY_COMPARATOR = Comparator.comparing((Shipment s) -> s.getPriority().getRank())
+        .thenComparing(Shipment::getRegistrationTime);
 
     public ShipmentService(InMemoryDataStore dataStore, ShipmentValidator validator, ProductBatchService batchService) {
         this.dataStore = dataStore;
@@ -34,10 +25,7 @@ public class ShipmentService {
         this.batchService = batchService;
     }
 
-    public Shipment registerShipment(String shipmentId, String orderRef, String destinationCity,
-                                     double destLat, double destLon, String productId, String batchId,
-                                     int requiredQuantity, int requiredCrates, ShipmentPriority priority,
-                                     LocalDateTime deadline) {
+    public Shipment registerShipment(String shipmentId, String orderRef, String destinationCity, double destLat, double destLon, String productId, String batchId, int requiredQuantity, int requiredCrates, ShipmentPriority priority, LocalDateTime deadline) {
         if (shipmentId == null || shipmentId.trim().isEmpty()) {
             shipmentId = IdGenerator.nextId("SH");
         }
@@ -47,8 +35,7 @@ public class ShipmentService {
 
         validator.validateRegistration(orderRef, destinationCity, productId, batchId, requiredQuantity, requiredCrates, deadline);
 
-        Shipment shipment = new Shipment(shipmentId, orderRef, destinationCity, destLat, destLon,
-                productId, batchId, requiredQuantity, requiredCrates, priority, deadline);
+        Shipment shipment = new Shipment(shipmentId, orderRef, destinationCity, destLat, destLon, productId, batchId, requiredQuantity, requiredCrates, priority, deadline);
 
         dataStore.getShipments().put(shipmentId, shipment);
         return shipment;
@@ -65,9 +52,7 @@ public class ShipmentService {
 
     public List<Shipment> getPendingShipmentsSortedByPriority() {
         PriorityQueue<Shipment> queue = new PriorityQueue<>(PRIORITY_COMPARATOR);
-        dataStore.getShipments().values().stream()
-                .filter(s -> s.getStatus() == ShipmentStatus.PENDING)
-                .forEach(queue::offer);
+        dataStore.getShipments().values().stream().filter(s -> s.getStatus() == ShipmentStatus.PENDING).forEach(queue::offer);
 
         List<Shipment> sortedList = new ArrayList<>();
         while (!queue.isEmpty()) {
@@ -84,12 +69,10 @@ public class ShipmentService {
             throw new ValidationException("Cannot cancel shipment " + shipmentId + " because it is " + shipment.getStatus());
         }
 
-        // Release batch reservation if allocated
         if (shipment.getBatchId() != null && shipment.getStatus() == ShipmentStatus.ALLOCATED) {
             batchService.releaseBatchStock(shipment.getBatchId(), shipment.getRequiredQuantity());
         }
 
-        // Release allocated crates
         for (String crateId : shipment.getAllocatedCrateIds()) {
             var crate = dataStore.getCrates().get(crateId);
             if (crate != null) {

@@ -6,9 +6,6 @@ import pharmatrack.common.util.InputValidator;
 
 import java.time.LocalDateTime;
 
-/**
- * Audit event capturing operational milestones across temperature monitoring and shipment logistics.
- */
 public class ShipmentEvent {
     private final String eventId;
     private final String eventType;

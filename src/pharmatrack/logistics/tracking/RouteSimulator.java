@@ -13,10 +13,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.*;
 
-/**
- * Simulates vehicle transit through checkpoints, delivery arrivals, delays, and vehicle returns.
- * Note: Simulates planned checkpoints; this is not real GPS or live traffic telemetry.
- */
 public class RouteSimulator {
     private final InMemoryDataStore dataStore;
     private final DeliveryService deliveryService;
@@ -34,11 +30,7 @@ public class RouteSimulator {
     private boolean running = false;
     private final ConcurrentHashMap<String, Long> injectedDelaysMinutes = new ConcurrentHashMap<>();
 
-    public RouteSimulator(InMemoryDataStore dataStore,
-                          DeliveryService deliveryService,
-                          CrateReturnService crateReturnService,
-                          ShipmentDelayDetector delayDetector,
-                          VehicleService vehicleService) {
+    public RouteSimulator(InMemoryDataStore dataStore, DeliveryService deliveryService, CrateReturnService crateReturnService,  ShipmentDelayDetector delayDetector,  VehicleService vehicleService) {
         this.dataStore = dataStore;
         this.deliveryService = deliveryService;
         this.crateReturnService = crateReturnService;
@@ -77,10 +69,6 @@ public class RouteSimulator {
         }
     }
 
-    /**
-     * Deterministically advances a specific trip by one checkpoint.
-     * Ideal for unit tests, scripted evaluations, and console interactive stepping.
-     */
     public synchronized boolean advanceTripStep(String tripId) {
         VehicleTrip trip = dataStore.getVehicleTrips().get(tripId);
         if (trip == null) {
@@ -88,7 +76,6 @@ public class RouteSimulator {
         }
 
         if (trip.getStatus() == TripStatus.PLANNED) {
-            // First transition from PLANNED to DISPATCHED
             trip.transitionStatus(TripStatus.DISPATCHED);
         }
 
@@ -101,7 +88,6 @@ public class RouteSimulator {
         int currentIndex = trip.getCurrentCheckpointIndex();
 
         if (currentIndex >= checkpoints.size()) {
-            // Trip already at or past the end
             if (trip.getStatus() != TripStatus.COMPLETED) {
                 crateReturnService.completeVehicleTripReturn(tripId);
             }
@@ -111,7 +97,6 @@ public class RouteSimulator {
         RouteCheckpoint cp = checkpoints.get(currentIndex);
         LocalDateTime simulatedTime = LocalDateTime.now();
 
-        // Apply injected delay if present
         if (injectedDelaysMinutes.containsKey(tripId)) {
             long delayMins = injectedDelaysMinutes.remove(tripId);
             LocalDateTime baseExpected = cp.getExpectedArrivalTime() != null ? cp.getExpectedArrivalTime() : simulatedTime;
@@ -123,38 +108,30 @@ public class RouteSimulator {
             cp.setStatus(CheckpointStatus.REACHED);
         }
 
-        // Evaluate delay against expected arrival time
         delayDetector.checkDelay(trip, cp, simulatedTime);
 
-        // Update vehicle simulated location
         Vehicle vehicle = vehicleService.findVehicleById(trip.getVehicleId()).orElse(null);
         if (vehicle != null) {
             vehicle.setLastKnownLocation(cp.getName());
         }
 
-        // Log Checkpoint Reached Event
         ShipmentEvent evt = new ShipmentEvent(
                 IdGenerator.nextId("EVT"), "CheckpointReachedEvent",
                 cp.getAssociatedShipmentId(), tripId, null,
-                String.format("Trip %s reached checkpoint [%d/%d]: %s",
-                        tripId, currentIndex + 1, checkpoints.size(), cp.getName()));
+                String.format("Trip %s reached checkpoint [%d/%d]: %s", tripId, currentIndex + 1, checkpoints.size(), cp.getName()));
         dataStore.addEvent(evt);
 
-        // If this is a delivery stop, trigger shipment unloading and delivery
         if (cp.isDeliveryStop() && cp.getAssociatedShipmentId() != null) {
             deliveryService.deliverShipment(cp.getAssociatedShipmentId(), simulatedTime);
         }
 
-        // Advance to next index
         int nextIndex = currentIndex + 1;
         trip.setCurrentCheckpointIndex(nextIndex);
 
-        // If trip was DISPATCHED, ensure marked IN_TRANSIT
         if (trip.getStatus() == TripStatus.DISPATCHED && nextIndex > 0) {
             trip.transitionStatus(TripStatus.IN_TRANSIT);
         }
 
-        // If reached the end of the route
         if (nextIndex >= checkpoints.size()) {
             crateReturnService.completeVehicleTripReturn(tripId);
             return false;
