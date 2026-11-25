@@ -89,7 +89,6 @@ public class Main {
         
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             sensorSimulator.shutdown();
-            routeSimulator.shutdown();
         }, "PharmaTrack-ShutdownHook"));
 
        

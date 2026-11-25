@@ -1,0 +1,14 @@
+# Build output
+bin/
+*.class
+
+# IDE and Editor configurations
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS temporary files
+Thumbs.db
+.DS_Store

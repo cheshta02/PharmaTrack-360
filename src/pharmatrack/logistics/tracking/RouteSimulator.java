@@ -19,15 +19,6 @@ public class RouteSimulator {
     private final CrateReturnService crateReturnService;
     private final ShipmentDelayDetector delayDetector;
     private final VehicleService vehicleService;
-
-    private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor(r -> {
-        Thread t = new Thread(r, "RouteSimulator-Thread");
-        t.setDaemon(true);
-        return t;
-    });
-
-    private ScheduledFuture<?> scheduledTask;
-    private boolean running = false;
     private final ConcurrentHashMap<String, Long> injectedDelaysMinutes = new ConcurrentHashMap<>();
 
     public RouteSimulator(InMemoryDataStore dataStore, DeliveryService deliveryService, CrateReturnService crateReturnService,  ShipmentDelayDetector delayDetector,  VehicleService vehicleService) {
@@ -38,37 +29,9 @@ public class RouteSimulator {
         this.vehicleService = vehicleService;
     }
 
-    public synchronized void start(long periodMillis) {
-        if (running) return;
-        running = true;
-        scheduledTask = scheduler.scheduleAtFixedRate(this::tickAllActiveTrips, 500, periodMillis, TimeUnit.MILLISECONDS);
-    }
-
-    public synchronized void stop() {
-        if (!running) return;
-        running = false;
-        if (scheduledTask != null) {
-            scheduledTask.cancel(false);
-        }
-    }
-
-    public synchronized void shutdown() {
-        stop();
-        scheduler.shutdownNow();
-    }
-
     public void injectDelay(String tripId, long delayMinutes) {
         injectedDelaysMinutes.put(tripId, delayMinutes);
     }
-
-    public void tickAllActiveTrips() {
-        for (VehicleTrip trip : dataStore.getVehicleTrips().values()) {
-            if (trip.getStatus() == TripStatus.DISPATCHED || trip.getStatus() == TripStatus.IN_TRANSIT) {
-                advanceTripStep(trip.getTripId());
-            }
-        }
-    }
-
     public synchronized boolean advanceTripStep(String tripId) {
         VehicleTrip trip = dataStore.getVehicleTrips().get(tripId);
         if (trip == null) {
