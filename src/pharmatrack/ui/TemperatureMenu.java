@@ -98,8 +98,7 @@ public class TemperatureMenu {
         System.out.printf("%-10s %-32s %-15s %-10s %-8s\n", "ID", "Name", "Category", "PolicyID", "Active");
         System.out.println("-----------------------------------------------------------------------------");
         for (PharmaceuticalProduct p : list) {
-            System.out.printf("%-10s %-32s %-15s %-10s %-8s\n",
-                    p.getProductId(), p.getName(), p.getCategory(), p.getPolicyId(), p.isActive());
+            System.out.printf("%-10s %-32s %-15s %-10s %-8s\n", p.getProductId(), p.getName(), p.getCategory(), p.getPolicyId(), p.isActive());
         }
     }
 
@@ -162,9 +161,8 @@ public class TemperatureMenu {
         System.out.println("----------------------------------------------------------------------------------------");
         for (ProductBatch b : list) {
             System.out.printf("%-10s %-10s %-8s %-12d %-10d %-12d %-12s %-8s\n",
-                    b.getBatchId(), b.getProductId(), b.getWarehouseId(),
-                    b.getAvailableQuantity(), b.getReservedQuantity(), b.getTotalQuantity(),
-                    b.getExpiryDate(), b.isBlocked());
+                    b.getBatchId(), b.getProductId(), b.getWarehouseId(), b.getAvailableQuantity(), b.getReservedQuantity(), 
+                    b.getTotalQuantity(), b.getExpiryDate(), b.isBlocked());
         }
     }
 
@@ -175,10 +173,10 @@ public class TemperatureMenu {
     private void handleToggleSimulation() {
         if (sensorSimulator.isRunning()) {
             sensorSimulator.stop();
-            System.out.println("  [*] Sensor simulation stopped.");
+            System.out.println("Sensor simulation stopped.");
         } else {
             sensorSimulator.start(2000); // 2 second cycle
-            System.out.println("  [*] Sensor simulation started (2-second interval).");
+            System.out.println("Sensor simulation started (2-second interval).");
         }
     }
 
@@ -237,7 +235,7 @@ public class TemperatureMenu {
             System.out.printf("  [!] Invalid corrupted output injected into Sensor %s.\n", sensorId);
         } else {
             s.setStatus(SensorStatus.ACTIVE);
-            System.out.printf("  [*] Sensor %s reset to ACTIVE.\n", sensorId);
+            System.out.printf("Sensor %s reset to ACTIVE.\n", sensorId);
         }
     }
 }

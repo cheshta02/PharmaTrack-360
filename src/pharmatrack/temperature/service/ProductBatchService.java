@@ -28,8 +28,7 @@ public class ProductBatchService {
             throw new ValidationException("Batch with ID " + batchId + " already exists.");
         }
 
-        PharmaceuticalProduct product = productService.findProductById(productId)
-                .orElseThrow(() -> new ValidationException("Cannot register batch for non-existent product: " + productId));
+        PharmaceuticalProduct product = productService.findProductById(productId).orElseThrow(() -> new ValidationException("Cannot register batch for non-existent product: " + productId));
         if (!product.isActive()) {
             throw new ValidationException("Cannot register batch for inactive product: " + productId);
         }

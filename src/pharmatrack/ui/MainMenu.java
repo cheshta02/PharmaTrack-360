@@ -48,11 +48,9 @@ public class MainMenu {
             System.out.println(" 2. Shipment & Logistics Operations");
             System.out.println(" 3. Warehouse Management & Inventories");
             System.out.println(" 4. Vehicle Fleet Management");
-            System.out.println(" 5. Shipment Management (Priority Queue)");
-            System.out.println(" 6. Route & Tracking Operations");
-            System.out.println(" 7. Alerts and Reports");
-            System.out.println(" 8. Save Data to JSON Files");
-            System.out.println(" 9. Load Data from JSON Files");
+            System.out.println(" 5. Alerts and Reports");
+            System.out.println(" 6. Save Data to JSON Files");
+            System.out.println(" 7. Load Data from JSON Files");
             System.out.println(" 0. Exit System");
             System.out.println("========================================================");
 
@@ -62,11 +60,9 @@ public class MainMenu {
                 case 2 -> logisticsMenu.display(scanner);
                 case 3 -> handleWarehouseManagement();
                 case 4 -> handleVehicleManagement();
-                case 5 -> logisticsMenu.display(scanner);
-                case 6 -> logisticsMenu.display(scanner);
-                case 7 -> reportMenu.display(scanner);
-                case 8 -> handleSaveData();
-                case 9 -> handleLoadData();
+                case 5 -> reportMenu.display(scanner);
+                case 6 -> handleSaveData();
+                case 7 -> handleLoadData();
                 case 0 -> {
                     System.out.println("\nExiting PharmaTrack 360. Goodbye.");
                     return;

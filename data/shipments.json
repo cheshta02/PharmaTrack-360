@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "priority": "URGENT",
+    "shipmentId": "SH003",
+    "productId": "PRD002",
+    "allocatedCrateIds": [
+      "CR014",
+      "CR015",
+      "CR012"
+    ],
+    "requiredQuantity": 300,
+    "registrationTime": "2026-11-25T18:05:36.723310600",
+    "sourceWarehouseId": "WH001",
+    "batchId": "BAT002",
+    "status": "ALLOCATED",
+    "expectedDeliveryDeadline": "2026-12-03T18:05:36.723310600",
+    "requiredCrates": 3,
+    "orderRef": "pryangna",
+    "deliveryTime": null,
+    "destinationCity": "amritsar",
+    "assignedTripId": "TRP001",
+    "destLat": 31.634,
+    "destLon": 74.8723
+  },
+  {
+    "priority": "NORMAL",
+    "shipmentId": "SH002",
+    "productId": "PRD001",
+    "allocatedCrateIds": [
+      "CR005",
+      "CR003"
+    ],
+    "requiredQuantity": 200,
+    "registrationTime": "2026-11-25T18:03:34.672941100",
+    "sourceWarehouseId": "WH001",
+    "batchId": "BAT001",
+    "status": "ALLOCATED",
+    "expectedDeliveryDeadline": "2026-12-05T18:03:34.672941100",
+    "requiredCrates": 2,
+    "orderRef": "cheshta",
+    "deliveryTime": null,
+    "destinationCity": "jalandhar",
+    "assignedTripId": "TRP001",
+    "destLat": 31.326,
+    "destLon": 75.5762
+  }
+]

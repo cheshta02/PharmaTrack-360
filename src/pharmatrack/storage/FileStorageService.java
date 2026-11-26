@@ -2,8 +2,6 @@ package pharmatrack.storage;
 
 import pharmatrack.json.TypeReference;
 import pharmatrack.json.ObjectMapper;
-import pharmatrack.json.SerializationFeature;
-import pharmatrack.json.JavaTimeModule;
 import pharmatrack.logistics.model.*;
 import pharmatrack.temperature.model.*;
 
@@ -21,9 +19,6 @@ public class FileStorageService {
     public FileStorageService(String dataDirectory) {
         this.dataDirectory = dataDirectory != null ? dataDirectory : "data";
         this.objectMapper = new ObjectMapper();
-        this.objectMapper.registerModule(new JavaTimeModule());
-        this.objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-        this.objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         try {
             Files.createDirectories(Paths.get(this.dataDirectory));
         } catch (IOException ignored) {

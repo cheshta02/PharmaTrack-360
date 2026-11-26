@@ -59,22 +59,15 @@ public class SensorHealthMonitor {
         StringBuilder sb = new StringBuilder();
         sb.append("=== Sensor Health Report ===\n");
         sb.append(String.format("Total Sensors: %d | Active: %d | Inactive: %d | Faulty: %d\n",
-                dataStore.getSensors().size(),
-                getActiveSensors().size(),
-                getInactiveSensors().size(),
-                getFaultySensors().size()));
+            dataStore.getSensors().size(), getActiveSensors().size(), getInactiveSensors().size(), getFaultySensors().size()));
         sb.append("--------------------------------------------------------------------------------\n");
         sb.append(String.format("%-10s %-10s %-12s %-10s %-20s %-10s\n",
-                "SensorID", "CrateID", "Type", "Status", "Last Seen", "Timeout(s)"));
+            "SensorID", "CrateID", "Type", "Status", "Last Seen", "Timeout(s)"));
         sb.append("--------------------------------------------------------------------------------\n");
         for (Sensor s : dataStore.getSensors().values()) {
             sb.append(String.format("%-10s %-10s %-12s %-10s %-20s %-10d\n",
-                    s.getSensorId(),
-                    s.getCrateId() != null ? s.getCrateId() : "Unassigned",
-                    s.getSensorType(),
-                    s.getStatus(),
-                    s.getLastHeartbeatTime() != null ? s.getLastHeartbeatTime().toString() : "Never",
-                    s.getTimeoutSeconds()));
+                    s.getSensorId(), s.getCrateId() != null ? s.getCrateId() : "Unassigned", s.getSensorType(), s.getStatus(), 
+                    s.getLastHeartbeatTime() != null ? s.getLastHeartbeatTime().toString() : "Never", s.getTimeoutSeconds()));
         }
         return sb.toString();
     }

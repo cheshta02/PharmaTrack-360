@@ -1,1 +1,1127 @@
-[]
+[
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN041",
+    "crateId": "CR041",
+    "status": "NORMAL",
+    "temperature": -17.363461791980278,
+    "readingId": "RDG001"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN042",
+    "crateId": "CR042",
+    "status": "NORMAL",
+    "temperature": -17.390065916944092,
+    "readingId": "RDG002"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN040",
+    "crateId": "CR040",
+    "status": "NORMAL",
+    "temperature": 5.885231673199596,
+    "readingId": "RDG003"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN038",
+    "crateId": "CR038",
+    "status": "NORMAL",
+    "temperature": 5.866247094044482,
+    "readingId": "RDG004"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN039",
+    "crateId": "CR039",
+    "status": "NORMAL",
+    "temperature": 6.099329371076744,
+    "readingId": "RDG005"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN036",
+    "crateId": "CR036",
+    "status": "NORMAL",
+    "temperature": 6.242023358803307,
+    "readingId": "RDG006"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN037",
+    "crateId": "CR037",
+    "status": "NORMAL",
+    "temperature": 5.921269748046783,
+    "readingId": "RDG007"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN034",
+    "crateId": "CR034",
+    "status": "NORMAL",
+    "temperature": 5.865448841665021,
+    "readingId": "RDG008"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN035",
+    "crateId": "CR035",
+    "status": "NORMAL",
+    "temperature": 5.978192145485492,
+    "readingId": "RDG009"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN032",
+    "crateId": "CR032",
+    "status": "NORMAL",
+    "temperature": 6.169741067274021,
+    "readingId": "RDG010"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN033",
+    "crateId": "CR033",
+    "status": "NORMAL",
+    "temperature": 6.25159666972123,
+    "readingId": "RDG011"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN052",
+    "crateId": "CR052",
+    "status": "NORMAL",
+    "temperature": -70.03810541534602,
+    "readingId": "RDG012"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN053",
+    "crateId": "CR053",
+    "status": "NORMAL",
+    "temperature": -69.85005629124673,
+    "readingId": "RDG013"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN050",
+    "crateId": "CR050",
+    "status": "NORMAL",
+    "temperature": 19.931940124615608,
+    "readingId": "RDG014"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN051",
+    "crateId": "CR051",
+    "status": "NORMAL",
+    "temperature": -70.19357291325437,
+    "readingId": "RDG015"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN049",
+    "crateId": "CR049",
+    "status": "NORMAL",
+    "temperature": 20.05660994653381,
+    "readingId": "RDG016"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN047",
+    "crateId": "CR047",
+    "status": "NORMAL",
+    "temperature": 19.8258605413198,
+    "readingId": "RDG017"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN048",
+    "crateId": "CR048",
+    "status": "NORMAL",
+    "temperature": 20.195579523132693,
+    "readingId": "RDG018"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN045",
+    "crateId": "CR045",
+    "status": "NORMAL",
+    "temperature": -17.69666923738729,
+    "readingId": "RDG019"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN046",
+    "crateId": "CR046",
+    "status": "NORMAL",
+    "temperature": 20.05245642907178,
+    "readingId": "RDG020"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN043",
+    "crateId": "CR043",
+    "status": "NORMAL",
+    "temperature": -17.349231755939524,
+    "readingId": "RDG021"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN044",
+    "crateId": "CR044",
+    "status": "NORMAL",
+    "temperature": -17.45737579095108,
+    "readingId": "RDG022"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN020",
+    "crateId": "CR020",
+    "status": "NORMAL",
+    "temperature": -17.451985069298765,
+    "readingId": "RDG023"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN016",
+    "crateId": "CR016",
+    "status": "NORMAL",
+    "temperature": -17.34849403084561,
+    "readingId": "RDG024"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN017",
+    "crateId": "CR017",
+    "status": "NORMAL",
+    "temperature": -17.781149056704052,
+    "readingId": "RDG025"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN014",
+    "crateId": "CR014",
+    "status": "NORMAL",
+    "temperature": 5.914751951686277,
+    "readingId": "RDG026"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN015",
+    "crateId": "CR015",
+    "status": "NORMAL",
+    "temperature": 6.190678158501384,
+    "readingId": "RDG027"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN012",
+    "crateId": "CR012",
+    "status": "NORMAL",
+    "temperature": 5.950612528051751,
+    "readingId": "RDG028"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN013",
+    "crateId": "CR013",
+    "status": "NORMAL",
+    "temperature": 6.284421408897529,
+    "readingId": "RDG029"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN010",
+    "crateId": "CR010",
+    "status": "NORMAL",
+    "temperature": 6.1280437546939375,
+    "readingId": "RDG030"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN098",
+    "crateId": "CR098",
+    "status": "NORMAL",
+    "temperature": 19.98834470993386,
+    "readingId": "RDG031"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN011",
+    "crateId": "CR011",
+    "status": "NORMAL",
+    "temperature": 5.874993898447083,
+    "readingId": "RDG032"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN099",
+    "crateId": "CR099",
+    "status": "NORMAL",
+    "temperature": 20.26991608079568,
+    "readingId": "RDG033"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN018",
+    "crateId": "CR018",
+    "status": "NORMAL",
+    "temperature": -17.30770490596819,
+    "readingId": "RDG034"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN019",
+    "crateId": "CR019",
+    "status": "NORMAL",
+    "temperature": -17.41801327128623,
+    "readingId": "RDG035"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN030",
+    "crateId": "CR030",
+    "status": "NORMAL",
+    "temperature": -70.07852710363485,
+    "readingId": "RDG036"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN031",
+    "crateId": "CR031",
+    "status": "NORMAL",
+    "temperature": 5.916152925219681,
+    "readingId": "RDG037"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN027",
+    "crateId": "CR027",
+    "status": "NORMAL",
+    "temperature": -70.03920334891563,
+    "readingId": "RDG038"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN028",
+    "crateId": "CR028",
+    "status": "NORMAL",
+    "temperature": -70.02560974333313,
+    "readingId": "RDG039"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN025",
+    "crateId": "CR025",
+    "status": "NORMAL",
+    "temperature": 19.983613052525513,
+    "readingId": "RDG040"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN026",
+    "crateId": "CR026",
+    "status": "NORMAL",
+    "temperature": -70.01858648763066,
+    "readingId": "RDG041"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN023",
+    "crateId": "CR023",
+    "status": "NORMAL",
+    "temperature": 20.196393454408998,
+    "readingId": "RDG042"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN024",
+    "crateId": "CR024",
+    "status": "NORMAL",
+    "temperature": 19.790618932717255,
+    "readingId": "RDG043"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN021",
+    "crateId": "CR021",
+    "status": "NORMAL",
+    "temperature": 20.2003197412665,
+    "readingId": "RDG044"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN022",
+    "crateId": "CR022",
+    "status": "NORMAL",
+    "temperature": 19.976183823596696,
+    "readingId": "RDG045"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN029",
+    "crateId": "CR029",
+    "status": "NORMAL",
+    "temperature": -70.13165680499631,
+    "readingId": "RDG046"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN085",
+    "crateId": "CR085",
+    "status": "NORMAL",
+    "temperature": 5.817578524453894,
+    "readingId": "RDG047"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN086",
+    "crateId": "CR086",
+    "status": "NORMAL",
+    "temperature": 5.80756406452495,
+    "readingId": "RDG048"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN083",
+    "crateId": "CR083",
+    "status": "NORMAL",
+    "temperature": 6.219412077796411,
+    "readingId": "RDG049"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN084",
+    "crateId": "CR084",
+    "status": "NORMAL",
+    "temperature": 5.991954397095716,
+    "readingId": "RDG050"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN081",
+    "crateId": "CR081",
+    "status": "NORMAL",
+    "temperature": 5.952583023978617,
+    "readingId": "RDG051"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN082",
+    "crateId": "CR082",
+    "status": "NORMAL",
+    "temperature": 6.079721874811967,
+    "readingId": "RDG052"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN080",
+    "crateId": "CR080",
+    "status": "NORMAL",
+    "temperature": -69.8800848129597,
+    "readingId": "RDG053"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN115",
+    "crateId": "CR115",
+    "status": "NORMAL",
+    "temperature": 5.889197070034604,
+    "readingId": "RDG054"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN116",
+    "crateId": "CR116",
+    "status": "NORMAL",
+    "temperature": -17.457027816682015,
+    "readingId": "RDG055"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN113",
+    "crateId": "CR113",
+    "status": "NORMAL",
+    "temperature": 5.922607373810257,
+    "readingId": "RDG056"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN114",
+    "crateId": "CR114",
+    "status": "NORMAL",
+    "temperature": 6.223088757578903,
+    "readingId": "RDG057"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN078",
+    "crateId": "CR078",
+    "status": "NORMAL",
+    "temperature": -69.8165614344028,
+    "readingId": "RDG058"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN111",
+    "crateId": "CR111",
+    "status": "NORMAL",
+    "temperature": 6.069728211021107,
+    "readingId": "RDG059"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN079",
+    "crateId": "CR079",
+    "status": "NORMAL",
+    "temperature": -70.0753843863466,
+    "readingId": "RDG060"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN112",
+    "crateId": "CR112",
+    "status": "NORMAL",
+    "temperature": 6.118349237561838,
+    "readingId": "RDG061"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN076",
+    "crateId": "CR076",
+    "status": "NORMAL",
+    "temperature": -69.75483125187546,
+    "readingId": "RDG062"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN077",
+    "crateId": "CR077",
+    "status": "NORMAL",
+    "temperature": -70.18231175687089,
+    "readingId": "RDG063"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN110",
+    "crateId": "CR110",
+    "status": "NORMAL",
+    "temperature": 6.185474890036644,
+    "readingId": "RDG064"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN119",
+    "crateId": "CR119",
+    "status": "NORMAL",
+    "temperature": -17.423240034751917,
+    "readingId": "RDG065"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN117",
+    "crateId": "CR117",
+    "status": "NORMAL",
+    "temperature": -17.521960437382994,
+    "readingId": "RDG066"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN118",
+    "crateId": "CR118",
+    "status": "NORMAL",
+    "temperature": -17.616652506599532,
+    "readingId": "RDG067"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN096",
+    "crateId": "CR096",
+    "status": "NORMAL",
+    "temperature": 20.023945660555622,
+    "readingId": "RDG068"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN097",
+    "crateId": "CR097",
+    "status": "NORMAL",
+    "temperature": 20.081066608673833,
+    "readingId": "RDG069"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN094",
+    "crateId": "CR094",
+    "status": "NORMAL",
+    "temperature": -17.72424530602074,
+    "readingId": "RDG070"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN095",
+    "crateId": "CR095",
+    "status": "NORMAL",
+    "temperature": -17.501603864514447,
+    "readingId": "RDG071"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN092",
+    "crateId": "CR092",
+    "status": "NORMAL",
+    "temperature": -17.78361150022842,
+    "readingId": "RDG072"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN093",
+    "crateId": "CR093",
+    "status": "NORMAL",
+    "temperature": -17.77810928998585,
+    "readingId": "RDG073"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN090",
+    "crateId": "CR090",
+    "status": "NORMAL",
+    "temperature": 5.990306312972583,
+    "readingId": "RDG074"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN091",
+    "crateId": "CR091",
+    "status": "NORMAL",
+    "temperature": -17.406967971334108,
+    "readingId": "RDG075"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN005",
+    "crateId": "CR005",
+    "status": "ABOVE_RANGE",
+    "temperature": 30.0,
+    "readingId": "RDG076"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN006",
+    "crateId": "CR006",
+    "status": "NORMAL",
+    "temperature": 5.9374597681027454,
+    "readingId": "RDG077"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN003",
+    "crateId": "CR003",
+    "status": "NORMAL",
+    "temperature": -69.73589652058877,
+    "readingId": "RDG078"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN124",
+    "crateId": "CR124",
+    "status": "NORMAL",
+    "temperature": 19.930766506350373,
+    "readingId": "RDG079"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN004",
+    "crateId": "CR004",
+    "status": "NORMAL",
+    "temperature": -69.91226081272141,
+    "readingId": "RDG080"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN125",
+    "crateId": "CR125",
+    "status": "NORMAL",
+    "temperature": 20.162279382664366,
+    "readingId": "RDG081"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN001",
+    "crateId": "CR001",
+    "status": "NORMAL",
+    "temperature": -69.76357432250896,
+    "readingId": "RDG082"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN089",
+    "crateId": "CR089",
+    "status": "NORMAL",
+    "temperature": 6.059302222287011,
+    "readingId": "RDG083"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN122",
+    "crateId": "CR122",
+    "status": "NORMAL",
+    "temperature": 20.285620682971047,
+    "readingId": "RDG084"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN002",
+    "crateId": "CR002",
+    "status": "NORMAL",
+    "temperature": -70.25374893223885,
+    "readingId": "RDG085"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN123",
+    "crateId": "CR123",
+    "status": "NORMAL",
+    "temperature": 20.165072417556306,
+    "readingId": "RDG086"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN087",
+    "crateId": "CR087",
+    "status": "NORMAL",
+    "temperature": 5.867293381499261,
+    "readingId": "RDG087"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN120",
+    "crateId": "CR120",
+    "status": "NORMAL",
+    "temperature": -17.260476802162266,
+    "readingId": "RDG088"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN088",
+    "crateId": "CR088",
+    "status": "NORMAL",
+    "temperature": 5.924301686172326,
+    "readingId": "RDG089"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN121",
+    "crateId": "CR121",
+    "status": "NORMAL",
+    "temperature": 19.958785733081278,
+    "readingId": "RDG090"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN009",
+    "crateId": "CR009",
+    "status": "NORMAL",
+    "temperature": 5.899394567030849,
+    "readingId": "RDG091"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN007",
+    "crateId": "CR007",
+    "status": "NORMAL",
+    "temperature": 5.889088482820391,
+    "readingId": "RDG092"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN008",
+    "crateId": "CR008",
+    "status": "NORMAL",
+    "temperature": 5.965641565251732,
+    "readingId": "RDG093"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN063",
+    "crateId": "CR063",
+    "status": "NORMAL",
+    "temperature": 5.757870549528494,
+    "readingId": "RDG094"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN064",
+    "crateId": "CR064",
+    "status": "NORMAL",
+    "temperature": 6.147091983729231,
+    "readingId": "RDG095"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN061",
+    "crateId": "CR061",
+    "status": "NORMAL",
+    "temperature": 5.802515842729738,
+    "readingId": "RDG096"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN062",
+    "crateId": "CR062",
+    "status": "NORMAL",
+    "temperature": 6.18323443195283,
+    "readingId": "RDG097"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN060",
+    "crateId": "CR060",
+    "status": "NORMAL",
+    "temperature": 5.783873757172117,
+    "readingId": "RDG098"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN058",
+    "crateId": "CR058",
+    "status": "NORMAL",
+    "temperature": 5.755768090164874,
+    "readingId": "RDG099"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN059",
+    "crateId": "CR059",
+    "status": "NORMAL",
+    "temperature": 5.71621792012928,
+    "readingId": "RDG100"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN056",
+    "crateId": "CR056",
+    "status": "NORMAL",
+    "temperature": 6.029000815039051,
+    "readingId": "RDG101"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN057",
+    "crateId": "CR057",
+    "status": "NORMAL",
+    "temperature": 5.869318971678389,
+    "readingId": "RDG102"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN054",
+    "crateId": "CR054",
+    "status": "NORMAL",
+    "temperature": -69.71950280679489,
+    "readingId": "RDG103"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN055",
+    "crateId": "CR055",
+    "status": "NORMAL",
+    "temperature": -69.75729935259906,
+    "readingId": "RDG104"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN074",
+    "crateId": "CR074",
+    "status": "NORMAL",
+    "temperature": 19.906365287866684,
+    "readingId": "RDG105"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN075",
+    "crateId": "CR075",
+    "status": "NORMAL",
+    "temperature": 19.70843349107164,
+    "readingId": "RDG106"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN072",
+    "crateId": "CR072",
+    "status": "NORMAL",
+    "temperature": 20.185756474886038,
+    "readingId": "RDG107"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN073",
+    "crateId": "CR073",
+    "status": "NORMAL",
+    "temperature": 20.012896582213852,
+    "readingId": "RDG108"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN070",
+    "crateId": "CR070",
+    "status": "NORMAL",
+    "temperature": -17.29890666699538,
+    "readingId": "RDG109"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN071",
+    "crateId": "CR071",
+    "status": "NORMAL",
+    "temperature": 20.05007698915467,
+    "readingId": "RDG110"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN104",
+    "crateId": "CR104",
+    "status": "NORMAL",
+    "temperature": -69.88705235839149,
+    "readingId": "RDG111"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN105",
+    "crateId": "CR105",
+    "status": "NORMAL",
+    "temperature": -69.96617067920857,
+    "readingId": "RDG112"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN069",
+    "crateId": "CR069",
+    "status": "NORMAL",
+    "temperature": -17.730549925768223,
+    "readingId": "RDG113"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN102",
+    "crateId": "CR102",
+    "status": "NORMAL",
+    "temperature": -69.94689481786342,
+    "readingId": "RDG114"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN103",
+    "crateId": "CR103",
+    "status": "NORMAL",
+    "temperature": -69.76291462878584,
+    "readingId": "RDG115"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN067",
+    "crateId": "CR067",
+    "status": "NORMAL",
+    "temperature": -17.424114900877615,
+    "readingId": "RDG116"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN100",
+    "crateId": "CR100",
+    "status": "NORMAL",
+    "temperature": 19.92954859470901,
+    "readingId": "RDG117"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN068",
+    "crateId": "CR068",
+    "status": "NORMAL",
+    "temperature": -17.257824943149853,
+    "readingId": "RDG118"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN101",
+    "crateId": "CR101",
+    "status": "NORMAL",
+    "temperature": -69.79978023934218,
+    "readingId": "RDG119"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN065",
+    "crateId": "CR065",
+    "status": "NORMAL",
+    "temperature": 5.85611617869968,
+    "readingId": "RDG120"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN066",
+    "crateId": "CR066",
+    "status": "NORMAL",
+    "temperature": -17.222658267850168,
+    "readingId": "RDG121"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN108",
+    "crateId": "CR108",
+    "status": "NORMAL",
+    "temperature": 5.938521693609362,
+    "readingId": "RDG122"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN109",
+    "crateId": "CR109",
+    "status": "NORMAL",
+    "temperature": 6.0441208312059365,
+    "readingId": "RDG123"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN106",
+    "crateId": "CR106",
+    "status": "NORMAL",
+    "temperature": 5.8548990006235,
+    "readingId": "RDG124"
+  },
+  {
+    "valid": true,
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN107",
+    "crateId": "CR107",
+    "status": "NORMAL",
+    "temperature": 6.193047334772207,
+    "readingId": "RDG125"
+  }
+]

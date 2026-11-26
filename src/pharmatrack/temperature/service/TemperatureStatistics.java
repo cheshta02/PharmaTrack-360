@@ -53,12 +53,7 @@ public class TemperatureStatistics {
             String rangeStr = String.format("%.1f°C to %.1f°C", c.getMinTempCapability(), c.getMaxTempCapability());
 
             sb.append(String.format("%-10s %-12s %-20s %-15s %-15s %-12s\n",
-                    c.getCrateId(),
-                    c.getStatus(),
-                    rangeStr,
-                    latestTempStr,
-                    tStatus,
-                    c.getCurrentShipmentId() != null ? c.getCurrentShipmentId() : "None"));
+                    c.getCrateId(), c.getStatus(), rangeStr,latestTempStr, tStatus, c.getCurrentShipmentId() != null ? c.getCurrentShipmentId() : "None"));
         }
         return sb.toString();
     }

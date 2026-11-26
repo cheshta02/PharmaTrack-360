@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "timestamp": "2026-11-25T17:48:38.781387100",
+    "shipmentId": null,
+    "crateId": "CR005",
+    "tripId": null,
+    "description": "TEMPERATURE EXCURSION ALERT on Crate CR005: 30.00°C is ABOVE_RANGE permitted range [-90.0°C to -50.0°C] (Batch: N/A, Shipment: N/A, Trip: N/A)",
+    "eventType": "TemperatureExcursionEvent",
+    "eventId": "EVT001"
+  }
+]

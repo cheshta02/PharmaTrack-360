@@ -124,8 +124,7 @@ public class LogisticsMenu {
         System.out.println("-----------------------------------------------------------------------------------");
         for (Vehicle v : list) {
             System.out.printf("%-10s %-16s %-10s %-12d %-10s %-18s\n",
-                    v.getVehicleId(), v.getRegistrationNumber(), v.getHomeWarehouseId(),
-                    v.getMaxCrateCapacity(), v.getStatus(),
+                    v.getVehicleId(), v.getRegistrationNumber(), v.getHomeWarehouseId(), v.getMaxCrateCapacity(), v.getStatus(), 
                     v.getCurrentTripId() != null ? v.getCurrentTripId() : "None");
         }
     }
@@ -152,8 +151,8 @@ public class LogisticsMenu {
             LocalDateTime deadline = LocalDateTime.now().plusDays(deadlineDays);
 
             Shipment shipment = shipmentService.registerShipment(
-                    shId.isEmpty() ? null : shId, orderRef, destCity, 0, 0,
-                    prodId, null, qty, crates, priority, deadline);
+                shId.isEmpty() ? null : shId, orderRef, destCity, 0, 0,
+                prodId, null, qty, crates, priority, deadline);
 
             System.out.println("  [+] Success: Shipment registered -> " + shipment);
         } catch (Exception e) {
@@ -174,9 +173,8 @@ public class LogisticsMenu {
         System.out.println("-----------------------------------------------------------------------------------------------");
         for (Shipment s : pending) {
             System.out.printf("%-10s %-12s %-15s %-10s %-10s %-8d %-8d %-15s\n",
-                    s.getShipmentId(), s.getOrderRef(), s.getDestinationCity(),
-                    s.getPriority(), s.getProductId(), s.getRequiredQuantity(), s.getRequiredCrates(),
-                    s.getExpectedDeliveryDeadline().toLocalDate());
+                s.getShipmentId(), s.getOrderRef(), s.getDestinationCity(), s.getPriority(), s.getProductId(), 
+                s.getRequiredQuantity(), s.getRequiredCrates(), s.getExpectedDeliveryDeadline().toLocalDate());
         }
     }
 
@@ -189,9 +187,7 @@ public class LogisticsMenu {
             return;
         }
 
-        var result = warehouseSelectionService.selectFeasibleWarehouse(
-                s.getDestinationCity(), s.getProductId(), s.getRequiredQuantity(),
-                s.getRequiredCrates(), s.getExpectedDeliveryDeadline());
+        var result = warehouseSelectionService.selectFeasibleWarehouse( s.getDestinationCity(), s.getProductId(), s.getRequiredQuantity(), s.getRequiredCrates(), s.getExpectedDeliveryDeadline());
 
         System.out.println("\n--- Feasibility Evaluation Logs ---");
         for (String log : result.getEvaluationLogs()) {
@@ -227,13 +223,9 @@ public class LogisticsMenu {
         var result = emergencyDispatchService.planEmergencyDispatch(s);
         System.out.println("\nResult: " + result.message);
         if (result.success) {
-            System.out.println("Do you want to create and dispatch the emergency vehicle trip immediately? (1: Yes, 2: No)");
-            int opt = InputValidator.readInt(scanner, "Choice", 1, 2);
-            if (opt == 1) {
-                VehicleTrip trip = tripService.createTrip(result.sourceWarehouse.getWarehouseId(), List.of(s), result.vehicle);
-                tripService.dispatchTrip(trip.getTripId());
-                System.out.println("  [+] Emergency Trip " + trip.getTripId() + " dispatched successfully!");
-            }
+            VehicleTrip trip = tripService.createTrip(result.sourceWarehouse.getWarehouseId(), List.of(s), result.vehicle);
+            tripService.dispatchTrip(trip.getTripId());
+            System.out.println("  [+] Emergency Trip " + trip.getTripId() + " dispatched successfully!");
         }
     }
 
@@ -256,20 +248,16 @@ public class LogisticsMenu {
         System.out.println("\nConsolidation Evaluation: " + res.reason);
 
         if (res.eligible) {
-            System.out.println("Do you want to allocate a vehicle and create the consolidated trip? (1: Yes, 2: No)");
-            int opt = InputValidator.readInt(scanner, "Choice", 1, 2);
-            if (opt == 1) {
-                try {
-                    List<Crate> allCrates = new ArrayList<>();
-                    for (String cId : res.allCrateIds) {
-                        dataStore.getCrates().computeIfPresent(cId, (k, c) -> { allCrates.add(c); return c; });
-                    }
-                    Vehicle vehicle = vehicleAllocationService.allocateVehicleForTrip(res.sourceWarehouseId, allCrates);
-                    VehicleTrip trip = tripService.createTrip(res.sourceWarehouseId, candidateShipments, vehicle);
-                    System.out.println("  [+] Consolidated Trip created successfully: " + trip.getTripId());
-                } catch (Exception e) {
-                    System.out.println("  [!] Error: " + e.getMessage());
+            try {
+                List<Crate> allCrates = new ArrayList<>();
+                for (String cId : res.allCrateIds) {
+                    dataStore.getCrates().computeIfPresent(cId, (k, c) -> { allCrates.add(c); return c; });
                 }
+                Vehicle vehicle = vehicleAllocationService.allocateVehicleForTrip(res.sourceWarehouseId, allCrates);
+                VehicleTrip trip = tripService.createTrip(res.sourceWarehouseId, candidateShipments, vehicle);
+                System.out.println("  [+] Consolidated Trip created successfully: " + trip.getTripId());
+            } catch (Exception e) {
+                System.out.println("  [!] Error: " + e.getMessage());
             }
         }
     }

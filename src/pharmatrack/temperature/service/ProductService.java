@@ -27,8 +27,7 @@ public class ProductService {
             throw new ValidationException("Product with ID " + productId + " already exists.");
         }
 
-        TemperaturePolicy policy = policyService.findPolicyById(policyId)
-                .orElseThrow(() -> new ValidationException("Cannot assign invalid Policy ID: " + policyId));
+        TemperaturePolicy policy = policyService.findPolicyById(policyId).orElseThrow(() -> new ValidationException("Cannot assign invalid Policy ID: " + policyId));
         if (!policy.isActive()) {
             throw new ValidationException("Cannot assign inactive Policy: " + policyId);
         }

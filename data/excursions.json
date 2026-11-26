@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "timestamp": "2026-11-25T17:48:38.762611900",
+    "sensorId": "SEN005",
+    "shipmentId": null,
+    "observedTemperature": 30.0,
+    "batchId": null,
+    "crateId": "CR005",
+    "tripId": null,
+    "maxPermitted": -50.0,
+    "excursionId": "EXC001",
+    "excursionType": "ABOVE_RANGE",
+    "minPermitted": -90.0,
+    "durationSeconds": 0
+  }
+]

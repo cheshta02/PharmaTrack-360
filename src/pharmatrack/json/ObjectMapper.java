@@ -13,18 +13,6 @@ public class ObjectMapper {
     public ObjectMapper() {
     }
 
-    public ObjectMapper registerModule(Object module) {
-        return this;
-    }
-
-    public ObjectMapper disable(SerializationFeature feature) {
-        return this;
-    }
-
-    public ObjectMapper enable(SerializationFeature feature) {
-        return this;
-    }
-
     public void writeValue(File file, Object value) throws IOException {
         String json = toJson(value, 0);
         if (file.getParentFile() != null) {

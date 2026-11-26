@@ -26,8 +26,7 @@ public class CrateReturnService {
     }
 
     public void processCrateInspection(String crateId) {
-        Crate crate = crateService.findCrateById(crateId)
-                .orElseThrow(() -> new ValidationException("Crate " + crateId + " not found."));
+        Crate crate = crateService.findCrateById(crateId).orElseThrow(() -> new ValidationException("Crate " + crateId + " not found."));
 
         if (crate.getStatus() == CrateStatus.RETURNING) {
             crate.transitionStatus(CrateStatus.INSPECTION);
@@ -37,10 +36,8 @@ public class CrateReturnService {
             crate.setCurrentShipmentId(null);
             crate.setCurrentTripId(null);
 
-            ShipmentEvent evt = new ShipmentEvent(
-                    IdGenerator.nextId("EVT"), "CrateReturnedEvent",
-                    null, null, crateId,
-                    "Crate " + crateId + " successfully inspected, sanitized, and returned to AVAILABLE status.");
+            ShipmentEvent evt = new ShipmentEvent( IdGenerator.nextId("EVT"), "CrateReturnedEvent",
+                null, null, crateId, "Crate " + crateId + " successfully inspected, sanitized, and returned to AVAILABLE status.");
             dataStore.addEvent(evt);
         }
     }

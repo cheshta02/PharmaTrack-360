@@ -44,12 +44,7 @@ public class GeocodingService {
     public GeocodingService(InMemoryDataStore dataStore) {
         this.dataStore = dataStore;
         HttpClient client = null;
-        try {
-            client = HttpClient.newBuilder()
-                    .connectTimeout(Duration.ofSeconds(4))
-                    .build();
-        } catch (Throwable ignored) {
-        }
+        client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(4)).build();
         this.httpClient = client;
         this.objectMapper = new ObjectMapper();
     }

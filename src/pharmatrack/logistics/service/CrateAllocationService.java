@@ -31,13 +31,10 @@ public class CrateAllocationService {
             throw new ValidationException("Source warehouse must be assigned before allocating crates.");
         }
 
-        List<Crate> availableCompatible = crateInventoryService.findCompatibleAvailableCrates(
-                shipment.getSourceWarehouseId(), policy, shipment.getRequiredCrates());
+        List<Crate> availableCompatible = crateInventoryService.findCompatibleAvailableCrates(shipment.getSourceWarehouseId(), policy, shipment.getRequiredCrates());
 
         if (availableCompatible.size() < shipment.getRequiredCrates()) {
-            throw new ResourceUnavailableException(String.format(
-                    "Insufficient compatible available crates at %s for policy %s. Needed: %d, Available: %d",
-                    shipment.getSourceWarehouseId(), policy.getPolicyId(), shipment.getRequiredCrates(), availableCompatible.size()));
+            throw new ResourceUnavailableException(String.format( "Insufficient compatible available crates at %s for policy %s. Needed: %d, Available: %d", shipment.getSourceWarehouseId(), policy.getPolicyId(), shipment.getRequiredCrates(), availableCompatible.size()));
         }
 
         List<String> allocatedIds = new ArrayList<>();

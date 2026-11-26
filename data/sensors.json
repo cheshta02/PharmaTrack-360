@@ -1,1127 +1,1127 @@
 [
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN097",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR097",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
-    "sensorId": "SEN098",
-    "crateId": "CR098",
-    "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
-  },
-  {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN010",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR010",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
+    "sensorId": "SEN098",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
+    "crateId": "CR098",
+    "status": "ACTIVE",
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
+  },
+  {
     "sensorId": "SEN095",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR095",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN096",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR096",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN013",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR013",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN014",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR014",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN011",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR011",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN099",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR099",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN012",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR012",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN017",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR017",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN018",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR018",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN015",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR015",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN016",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR016",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN019",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR019",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN090",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR090",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN093",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR093",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN094",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR094",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN091",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR091",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN092",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR092",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN020",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR020",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN021",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR021",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN024",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR024",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN025",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR025",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN022",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR022",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN023",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR023",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN028",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR028",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN029",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR029",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN026",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR026",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN027",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR027",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN031",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR031",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN032",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR032",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN030",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR030",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN035",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR035",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN036",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR036",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN033",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR033",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN034",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR034",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN039",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR039",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN037",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR037",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN038",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR038",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN042",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR042",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN043",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR043",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN040",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR040",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN041",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR041",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN046",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR046",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN047",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR047",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN044",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR044",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN045",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR045",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN048",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR048",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN049",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR049",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN053",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR053",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN054",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR054",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN051",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR051",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN052",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR052",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN057",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR057",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN058",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR058",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN055",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR055",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN056",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR056",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN059",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR059",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN050",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR050",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN064",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR064",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN065",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR065",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN062",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR062",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN063",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR063",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN068",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR068",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN101",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR101",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN069",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR069",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN102",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR102",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN066",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR066",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN067",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR067",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN100",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR100",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN105",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR105",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN106",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR106",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN103",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR103",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN104",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR104",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN109",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR109",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN107",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR107",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN108",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR108",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN060",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR060",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN061",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR061",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN075",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR075",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN076",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR076",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN073",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR073",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN074",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR074",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN079",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR079",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN112",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR112",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN113",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR113",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN077",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR077",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN110",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR110",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN078",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR078",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN111",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR111",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN116",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR116",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN117",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR117",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN114",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR114",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN115",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR115",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN118",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR118",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN119",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR119",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN071",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR071",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN072",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR072",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN070",
+    "sensorType": "IoT-Sub-Zero Freeze-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR070",
     "status": "ACTIVE",
-    "sensorType": "IoT-Sub-Zero Freeze-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN086",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR086",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN087",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR087",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN120",
-    "crateId": "CR120",
-    "status": "ACTIVE",
     "sensorType": "IoT-Sub-Zero Freeze-Crate",
     "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
+    "crateId": "CR120",
+    "status": "ACTIVE",
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN084",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR084",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN085",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR085",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.251197700",
     "sensorId": "SEN002",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR002",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN123",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR123",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.251197700",
     "sensorId": "SEN003",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR003",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN124",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR124",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN088",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR088",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN121",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR121",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.251197700",
     "sensorId": "SEN001",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR001",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN089",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR089",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN122",
+    "sensorType": "IoT-Controlled-Ambient Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR122",
     "status": "ACTIVE",
-    "sensorType": "IoT-Controlled-Ambient Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.251197700",
     "sensorId": "SEN006",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR006",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN007",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR007",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.251197700",
     "sensorId": "SEN004",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR004",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN125",
-    "crateId": "CR125",
-    "status": "ACTIVE",
     "sensorType": "IoT-Controlled-Ambient Crate",
     "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
+    "crateId": "CR125",
+    "status": "ACTIVE",
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.251197700",
     "sensorId": "SEN005",
+    "sensorType": "IoT-Ultra-Low Cryo-Crate",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR005",
     "status": "ACTIVE",
-    "sensorType": "IoT-Ultra-Low Cryo-Crate",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN008",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR008",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.257184400",
     "sensorId": "SEN009",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR009",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN082",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR082",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN083",
+    "sensorType": "IoT-Standard Cold-Box",
+    "timeoutSeconds": 60,
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
     "crateId": "CR083",
     "status": "ACTIVE",
-    "sensorType": "IoT-Standard Cold-Box",
-    "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN080",
-    "crateId": "CR080",
-    "status": "ACTIVE",
     "sensorType": "IoT-Ultra-Low Cryo-Crate",
     "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
+    "crateId": "CR080",
+    "status": "ACTIVE",
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   },
   {
-    "lastHeartbeatTime": "2026-11-06T19:40:28.258063900",
     "sensorId": "SEN081",
-    "crateId": "CR081",
-    "status": "ACTIVE",
     "sensorType": "IoT-Standard Cold-Box",
     "timeoutSeconds": 60,
-    "lastReadingTime": null
+    "lastHeartbeatTime": "2026-11-25T17:48:38.762611900",
+    "crateId": "CR081",
+    "status": "ACTIVE",
+    "lastReadingTime": "2026-11-25T17:48:38.762611900"
   }
 ]

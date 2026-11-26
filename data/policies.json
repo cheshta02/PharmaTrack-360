@@ -7,8 +7,8 @@
     "minTemp": -80.0,
     "maxTemp": -60.0,
     "description": "Required for specialized mRNA vaccines",
-    "unit": "°C",
-    "effectiveDate": "2026-11-06"
+    "effectiveDate": "2026-11-06",
+    "unit": "°C"
   },
   {
     "name": "Refrigerated Cold Chain",
@@ -18,8 +18,8 @@
     "minTemp": 2.0,
     "maxTemp": 8.0,
     "description": "Standard 2°C to 8°C pharmaceutical cold chain",
-    "unit": "°C",
-    "effectiveDate": "2026-11-06"
+    "effectiveDate": "2026-11-06",
+    "unit": "°C"
   },
   {
     "name": "Frozen Biologics Storage",
@@ -29,8 +29,8 @@
     "minTemp": -20.0,
     "maxTemp": -15.0,
     "description": "Sub-zero frozen pharmaceutical storage",
-    "unit": "°C",
-    "effectiveDate": "2026-11-06"
+    "effectiveDate": "2026-11-06",
+    "unit": "°C"
   },
   {
     "name": "Controlled Room Temperature",
@@ -40,7 +40,7 @@
     "minTemp": 15.0,
     "maxTemp": 25.0,
     "description": "Regulated ambient storage",
-    "unit": "°C",
-    "effectiveDate": "2026-11-06"
+    "effectiveDate": "2026-11-06",
+    "unit": "°C"
   }
 ]

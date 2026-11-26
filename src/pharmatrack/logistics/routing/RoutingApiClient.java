@@ -16,13 +16,7 @@ public class RoutingApiClient {
 
     public RoutingApiClient() {
         HttpClient client = null;
-        try {
-            client = HttpClient.newBuilder()
-                    .connectTimeout(Duration.ofSeconds(5))
-                    .build();
-        } catch (Throwable ignored) {
-            // Loopback socket restriction in sandbox
-        }
+        client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(5)).build();
         this.httpClient = client;
     }
 
